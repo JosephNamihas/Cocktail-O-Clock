@@ -8,12 +8,13 @@ body {
 }
 
 .custom-jumbotron {
-    background-image: linear-gradient(0deg, #52033179, #7a024879), url(../images/bubbles.png);
+    background-image: linear-gradient(0deg, #4e032fcc, #4e032fcc), url(../images/200804-2121x1414-cocktails.jpg);
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    height: 20vh;
+    height: 90vh;
+    margin-bottom: 0px;
 }
 
 .custom-footer {
@@ -21,8 +22,5 @@ body {
     color: white;
     text-align: center;
     height: 10vh;
-}
-
-main {
-    height: 70vh;
+    border-top: 5px solid white;
 }
