@@ -13,7 +13,7 @@ $.ajax({
 
 });
 
-var giphySearchTerm = "Dog"; // Search term
+var giphySearchTerm = "Dog"; // Example Search term
 var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
   giphySearchTerm + "z5qgDu3m2hDyX5jYhDexGw6TZD2YYHUy"; // May need another API key. Mine not working at the moment
 
