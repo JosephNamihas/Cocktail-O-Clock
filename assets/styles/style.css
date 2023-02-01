@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Euclid Circular A', sans-serif;
+}
+
+.custom-jumbotron {
+    background-image: linear-gradient(0deg, #52033179, #7a024879), url(../images/bubbles.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    height: 20vh;
+}
+
+.custom-footer {
+    background-color: #46042a;
+    color: white;
+    text-align: center;
+    height: 10vh;
+}
+
+main {
+    height: 70vh;
+}
