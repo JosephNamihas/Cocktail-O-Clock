@@ -18,9 +18,12 @@ body {
 }
 
 .custom-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #46042a;
-    color: white;
+    color: rgba(255, 255, 255, 0.678);
     text-align: center;
     height: 10vh;
-    border-top: 5px solid white;
+    border-top: 6px solid white;
 }
