@@ -1,0 +1,51 @@
+## Requirements - https://courses.bootcampspot.com/courses/3021/assignments/44747?module_item_id=832491
+
+
+Use Bootstrap.
+
+Be deployed to GitHub Pages.
+
+Be interactive (in other words, accept and respond to user input).
+
+Use at least two server-side APIs Links to an external site..
+
+Use modals instead of alerts, confirms, or prompts.
+
+Use client-side storage to store persistent data.
+
+Be responsive.
+
+Have a polished UI.
+
+Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class/id naming conventions, indentation, quality comments, and so on).
+
+Have a quality README (including a unique name, description, technologies used, screenshot, and link to the deployed application).
+
+
+
+
+https://coding-boot-camp.github.io/full-stack/apis/api-resources
+
+Brief Overview:
+
+Cocktail'Oclock
+
+User searches for cocktail
+The ingredients and instructions populate along with an image of the cocktail. 
+Is it alcoholic or not? (Tickbox)
+Ingredient based searches (Dropdown)
+
+Search parameter then fed through to Giphy which populates related GIF.
+
+Modal to instruct user how to create cocktail
+
+For client side storage, previous searches are showed on a toolbar or a list at the side of the page
+
+Two APIs: The Cocktail DB and Giphy
+https://rapidapi.com/thecocktaildb/api/the-cocktail-db/
+https://developers.giphy.com/
+
+
+Possible Features:
+- To Share on social media? (WhatsApp etc)
+- Random Cocktail at specific time
