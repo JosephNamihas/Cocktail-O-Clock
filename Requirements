@@ -26,26 +26,3 @@ Have a quality README (including a unique name, description, technologies used, 
 
 https://coding-boot-camp.github.io/full-stack/apis/api-resources
 
-Brief Overview:
-
-Cocktail'Oclock
-
-User searches for cocktail
-The ingredients and instructions populate along with an image of the cocktail. 
-Is it alcoholic or not? (Tickbox)
-Ingredient based searches (Dropdown)
-
-Search parameter then fed through to Giphy which populates related GIF.
-
-Modal to instruct user how to create cocktail
-
-For client side storage, previous searches are showed on a toolbar or a list at the side of the page
-
-Two APIs: The Cocktail DB and Giphy
-https://rapidapi.com/thecocktaildb/api/the-cocktail-db/
-https://developers.giphy.com/
-
-
-Possible Features:
-- To Share on social media? (WhatsApp etc)
-- Random Cocktail at specific time

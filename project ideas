@@ -1,18 +1,23 @@
-Day 1
+Brief Overview:
 
-- Create a GitHub Repo
-- What is our project?
-- What APIs should we use?
-- How should it work?
-- Create issues on GitHub / Trello
+Cocktail'Oclock
 
-Tripadvisor API
+User searches for cocktail
+The ingredients and instructions populate along with an image of the cocktail. 
+Is it alcoholic or not? (Tickbox)
+Ingredient based searches (Dropdown)
+
+Search parameter then fed through to Giphy which populates related GIF.
+
+Modal to instruct user how to create cocktail
+
+For client side storage, previous searches are showed on a toolbar or a list at the side of the page
+
+Two APIs: The Cocktail DB and Giphy
+https://rapidapi.com/thecocktaildb/api/the-cocktail-db/
+https://developers.giphy.com/
 
 
-// TODO
-
-- Create GitHub Repo
-- 
-
-
-
+Possible Features:
+- To Share on social media? (WhatsApp etc)
+- Random Cocktail at specific time
