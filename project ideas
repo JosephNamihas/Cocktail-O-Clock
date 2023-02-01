@@ -24,5 +24,15 @@ Possible Features:
 
 
 
-One page for the homepage, one page for the recipies
-Recipies seperate from the main index
+
+
+
+-------
+
+- Never commit to master branch
+- Name branches after tasks.
+- Change index.html or script in their own branch. When happy with code, merge back into main branch. Code pushed into main branch
+
+- Git Status to check which branch you're in
+Git Checkout -b (creates a new branch) - Task125-Change-Font-Size
+Should default put you into the new branch
