@@ -1,16 +1,66 @@
+:root {
+    --activate-borders: dashed 2px white;
+}
+
 * {
     font-family: 'Euclid Circular A', sans-serif;
+    background-color: #46042a;
+    color: white;
 }
 
-aside {
-    float: right;
-    margin-right: 10%;
+/* Main grid */
+
+#main-container {
+    display: grid;
+    margin: 10% 10% 10% 10%;
+    align-items: center;
+    grid-gap: 2%;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    grid-template-areas:
+    "cocktail-image cocktail-method related"
+    "cocktail-image cocktail-gif favourites";
 }
 
-/* CSS GRID
+.cocktail-image {
+    grid-area: cocktail-image;
+    border: var(--activate-borders);
+    text-align: center;
+    height: auto;
+}
 
-2 columns
-2 rows
-image takes up the first column
-gif bottom right
-paragraph top right
+.cocktail-image img {
+    width: 100%;
+}
+
+.cocktail-method {
+    grid-area: cocktail-method;
+    border: var(--activate-borders);
+    text-align: center;
+}
+
+.cocktail-gif {
+    grid-area: cocktail-gif;
+    border: var(--activate-borders);
+    text-align: center;
+}
+
+.cocktail-gif img {
+    width: auto;
+}
+
+.related {
+    grid-area: related;
+    border: var(--activate-borders);
+    text-align: right;
+}
+
+.favourites {
+    grid-area: favourites;
+    border: var(--activate-borders);
+    text-align: right;
+}
+
+ul {
+     list-style-type: none;
+}

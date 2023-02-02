@@ -5,12 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cocktail O'Clock</title>
-    <link rel="stylesheet" href="assets/styles/cocktail-styles.css">
+    <link rel="stylesheet" href="assets\styles\cocktail-styles.css">
   </head>
   <body>
-    <aside id="favourites"><h2>Favourites</h2></aside>
-    <!-- Li elements dynamically created from JS -->
 
+
+  <div id="main-container">
+      <div class="cocktail-image"></div>
+      <div class="cocktail-method">
+        <h2 id="cocktail-name">#Cocktail Name</h2>
+        <p id="ingredients">Cocktail ingredients</p>
+        <p id="method">Instructions on how to mix up the cocktail of choice</p>
+      </div>
+      <div class="cocktail-gif"></div>
+      <div class="related"><h2>Related</h2>
+        <ul id="related-cocktails"> <!-- Placeholders until JS appends to UL-->
+          <li>Cocktail #1</li>
+          <li>Cocktail #2</li>
+          <li>Cocktail #3</li>
+        </ul>
+      </div>
+      <div class="favourites"><h2>Favourites</h2>
+        <ul id="favourite-cocktails"> <!-- Placeholders until JS appends to UL-->
+          <li>Cocktail #1</li>
+          <li>Cocktail #2</li>
+          <li>Cocktail #3</li>
+        </ul>
+      </div>
+  </div>
+
+  <!-- Implement col system for responsiveness and layout -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="./assets/js/script.js"></script>
@@ -20,4 +44,3 @@
 
 
 <!-- background color: #46842a-->
-<!-- font style: Euclid Circula A-->
