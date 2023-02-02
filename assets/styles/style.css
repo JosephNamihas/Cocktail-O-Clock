@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Poppins:wght@200;300;400;500;800&display=swap');
+
 /* Sets the box size calculation to include padding/borders */
 * {
     box-sizing: border-box;
@@ -14,7 +16,7 @@
 
 /* Set the site font to Euclid Circular A */
 body {
-    font-family: 'Euclid Circular A', sans-serif;
+  font-family: 'Itim', cursive, sans-serif;
 }
 
 /* Styles for the large jumbotron on homepage */
@@ -27,12 +29,13 @@ body {
     background-size: cover;
     background-position: center;
     color: var(--white);
-    height: 85vh;
+    height: 90vh;
     margin-bottom: 0px;
 }
 
 .lead {
-    color: var(--grey)
+    color: var(--grey);
+    font-size: 1.5rem;
 }
 
 /* Search input styling */
@@ -41,7 +44,12 @@ body {
     width: 40%
 }
 
-.form-control:focus {
+.form-control {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}
+
+.form-control:focus, .btn:focus {
     border-color: #976d11;
     box-shadow: 0 0 5px 5px rgba(167, 99, 4, 0.486);
 }
@@ -82,9 +90,11 @@ body {
   width: cover;
   padding: 0 2rem;
   background-color: var(--plum);
+  border-top: 6px solid var(--gold);
 }
 
 .slideshow-link{
+  width: 8%;
   filter: brightness(0.5);
   transition: filter 1.5s;
 }
