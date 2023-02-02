@@ -1,51 +1,40 @@
 // Global variable to store user's search input
-
 // Make a function that will call the cocktail API using the user's input
-
 // Event listener on the search button
 
-var cocktailName = "";
-
-function getCocktail() {
+function getCocktail(cocktailName) {
+  // ajax call to get the cocktail data from the users input
   $.ajax({
     method: 'GET',
     url: 'https://api.api-ninjas.com/v1/cocktail?name=' + cocktailName,
     headers: { 'X-Api-Key': 'oG7S2vqNUXRwDPUivFn60w==v3SxU4nBy9O504CG' },
     contentType: 'application/json',
     success: function (cocktailData) {
+      // If the call is succesful the following will be executed
       console.log(cocktailData);
-
-      // Todo: Look into local storage to store the users input - retrieve that on cocktail API
+      
+      // Stored the cocktailData object into local storage
+      localStorage.setItem("data", JSON.stringify(cocktailData));
+      
+      // Load the cocktail page view
+      window.location='./cocktail.html';
+      return;
     },
     error: function ajaxError(jqXHR) {
+      // If the call errors the following will be executed
       console.error('Error: ', jqXHR.responseText);
+
+      // Todo: Create error modal
     }
   });
 };
 
-function showCocktail() {
-  var apiKey = "&api_key=B1QMeeTfxi77NrOloXqbNZdThiCQkuho"
 
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    cocktailName + apiKey; // Rochelle's key
+// Event listener for when the user clicks on the search button
+$("#search-btn").on('click', function () {
+  // Gets the users input
+  var cocktailName = $("#search-input").val();
 
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (response) {
-
-    console.log(response);
-
-    var cocktailGifEl = $("#cocktailGif")
-    cocktailGifEl.attr("src", response.data[0].source)
-
-  });
-}
-
-$("#search-btn").on('click', function (event) {
-  event.preventDefault();
-
-  cocktailName = $("#search-input").val();
-  
-  getCocktail();
+  // Calls the above function using the users input
+  getCocktail(cocktailName);
 });

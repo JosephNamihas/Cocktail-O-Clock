@@ -1,9 +1,11 @@
 :root {
     /*--activate-borders: dashed 2px white; -- For Debugging*/
+    box-sizing: border-box;
 }
 
 * {
     font-family: 'Euclid Circular A', sans-serif;
+    font-weight: 400;
     background-color: #46042a;
     color: white;
     box-sizing: border-box;
@@ -21,6 +23,10 @@
     grid-template-areas:
     "cocktail-image cocktail-method related"
     "cocktail-image cocktail-gif favourites";
+}
+
+#cocktail-name {
+    text-transform: capitalize;
 }
 
 .cocktail-image {
@@ -49,8 +55,8 @@
 }
 
 .cocktail-gif img {
-    width: 150px;
-    height: 150px;
+    width: auto;
+    height: 200px;
     object-fit: cover;
 }
 
