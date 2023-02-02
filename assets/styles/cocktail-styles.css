@@ -1,7 +1,3 @@
-:root {
-    /*--activate-borders: dashed 2px white; -- For Debugging*/
-}
-
 * {
     font-family: 'Euclid Circular A', sans-serif;
     background-color: #46042a;
@@ -54,6 +50,8 @@
     object-fit: cover;
 }
 
+/* ---- Aside Elements -----*/
+
 .related {
     grid-area: related;
     border: var(--activate-borders);
@@ -77,6 +75,8 @@ ul li {
     padding: 10px;
 }
 
+/* ---- Footer -----*/
+
 footer {
     
     display: flex;
@@ -91,4 +91,19 @@ footer {
 footer p {
     padding-left: 10%;
     padding-right: 10%;
+}
+
+
+/* ---- Button Styling -----*/
+
+.custom-btn {
+    color: var(--white);
+    background-color: var(--gold);
+    border-radius: 0px 3px 3px 0px;
+    border: 1px solid var(--gold);
+}
+
+.custom-btn:hover {
+    background-color: #a7801d;
+    color: var(--white);
 }
