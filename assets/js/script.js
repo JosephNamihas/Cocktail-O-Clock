@@ -13,13 +13,11 @@ $.ajax({
 
 });
 
-var giphySearchTerm = "Dog"; // Example Search term
-var apiKey = "B1QMeeTfxi77NrOloXqbNZdThiCQkuho"
+var giphySearchTerm = "cocktail"; // Example Search term -- Pulls from search bar
+var apiKey = "&api_key=B1QMeeTfxi77NrOloXqbNZdThiCQkuho"
 
 var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-  giphySearchTerm + apiKey; 
-
-  // May need another API key. Mine not working at the moment
+  giphySearchTerm + apiKey; // Rochelle's key
 
 $.ajax({
   url: queryURL,
