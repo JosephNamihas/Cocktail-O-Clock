@@ -1,18 +1,19 @@
 :root {
-    /*--activate-borders: dashed 2px white;*/
+    /*--activate-borders: dashed 2px white; -- For Debugging*/
 }
 
 * {
     font-family: 'Euclid Circular A', sans-serif;
     background-color: #46042a;
     color: white;
+    box-sizing: border-box;
 }
 
 /* Main grid */
 
 #main-container {
     display: grid;
-    margin: 10% 10% 10% 10%;
+    margin: 10% 20% 10% 15%;
     align-items: center;
     grid-gap: 2%;
     grid-template-columns: 3;
@@ -30,7 +31,9 @@
 }
 
 .cocktail-image img {
-    width: 100%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .cocktail-method {
@@ -46,21 +49,46 @@
 }
 
 .cocktail-gif img {
-    width: auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
 .related {
     grid-area: related;
     border: var(--activate-borders);
     text-align: right;
+    color: #8b6512;
 }
 
 .favourites {
     grid-area: favourites;
     border: var(--activate-borders);
     text-align: right;
+    color: #8b6512;
 }
 
 ul {
      list-style-type: none;
+}
+
+ul li {
+    color: #8b6512;
+    padding: 10px;
+}
+
+footer {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #46042a;
+    color: grey;
+    height: 20vh;
+    border-top: 6px solid #8b6512;  
+}
+
+footer p {
+    padding-left: 10%;
+    padding-right: 10%;
 }
