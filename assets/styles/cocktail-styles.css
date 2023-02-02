@@ -1,0 +1,16 @@
+* {
+    font-family: 'Euclid Circular A', sans-serif;
+}
+
+aside {
+    float: right;
+    margin-right: 10%;
+}
+
+/* CSS GRID
+
+2 columns
+2 rows
+image takes up the first column
+gif bottom right
+paragraph top right
