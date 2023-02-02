@@ -1,12 +1,29 @@
-aside {
-    float: right;
-    margin-right: 10%;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-/* CSS GRID
+body {
+    font-family: 'Euclid Circular A', sans-serif;
+}
 
-2 columns
-2 rows
-image takes up the first column
-gif bottom right
-paragraph top right
+.custom-jumbotron {
+    background-image: linear-gradient(0deg, #4e032fcc, #4e032fcc), url(../images/200804-2121x1414-cocktails.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    height: 90vh;
+    margin-bottom: 0px;
+}
+
+.custom-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #46042a;
+    color: rgba(255, 255, 255, 0.678);
+    text-align: center;
+    height: 10vh;
+    border-top: 6px solid white;
+}
