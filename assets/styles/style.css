@@ -27,7 +27,7 @@ body {
     background-size: cover;
     background-position: center;
     color: var(--white);
-    height: 90vh;
+    height: 85vh;
     margin-bottom: 0px;
 }
 
@@ -63,7 +63,7 @@ body {
     color: var(--white);
 }
 
-/* Footer styling */
+/* Footer styling 
 .custom-footer {
     display: flex;
     align-items: center;
@@ -72,4 +72,44 @@ body {
     color: var(--grey);
     height: 10vh;
     border-top: 6px solid var(--gold);
+}*/
+
+/*slideshow*/
+.slideshow{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: cover;
+  padding: 0 2rem;
+  background-color: var(--plum);
 }
+
+.slideshow-link{
+  filter: brightness(0.5);
+  transition: filter 1.5s;
+}
+
+.slideshow-link:nth-child(1), 
+.slideshow-link:nth-child(5){
+  transition: width 0.5s,
+  opacity 0.5s;
+}
+
+.slideshow-link:nth-child(3){
+  transition: filter 0.5s;
+}
+
+.slideshow-link img{
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.faded-out{
+opacity: 0;
+width: 0;
+}
+
+.light{
+  filter: brightness(1);
+}
+/*end of slideshow*/
