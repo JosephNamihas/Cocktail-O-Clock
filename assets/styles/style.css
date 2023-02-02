@@ -1,29 +1,75 @@
+/* Sets the box size calculation to include padding/borders */
 * {
-    padding: 0;
-    margin: 0;
+    box-sizing: border-box;
 }
 
+/* A list of variable for values repeadted several times */
+:root {
+    --plum: #46042a;
+    --gold: #8b6512;
+    --white: #fff;
+    --grey: #c0c0c0;
+    --background-color: #380422cc;
+}
+
+/* Set the site font to Euclid Circular A */
 body {
     font-family: 'Euclid Circular A', sans-serif;
 }
 
+/* Styles for the large jumbotron on homepage */
 .custom-jumbotron {
-    background-image: linear-gradient(0deg, #4e032fcc, #4e032fcc), url(../images/200804-2121x1414-cocktails.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(0deg, var(--background-color), var(--background-color)), url(../images/200804-2121x1414-cocktails.jpg);
     background-size: cover;
     background-position: center;
-    color: white;
-    text-align: center;
+    color: var(--white);
     height: 90vh;
     margin-bottom: 0px;
 }
 
+.lead {
+    color: var(--grey)
+}
+
+/* Search input styling */
+.input-group {
+    margin-top: 20px;
+    width: 40%
+}
+
+.form-control:focus {
+    border-color: #976d11;
+    box-shadow: 0 0 5px 5px rgba(167, 99, 4, 0.486);
+}
+
+.search-icon {
+    margin-right: 7px;
+}
+
+/* Styling for the search button */
+.custom-btn {
+    color: var(--white);
+    background-color: var(--gold);
+    border-radius: 0px 3px 3px 0px;
+    border: 1px solid var(--gold);
+}
+
+.custom-btn:hover {
+    background-color: #a7801d;
+    color: var(--white);
+}
+
+/* Footer styling */
 .custom-footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #46042a;
-    color: rgba(255, 255, 255, 0.678);
-    text-align: center;
+    background-color: var(--plum);
+    color: var(--grey);
     height: 10vh;
-    border-top: 6px solid white;
+    border-top: 6px solid var(--gold);
 }
