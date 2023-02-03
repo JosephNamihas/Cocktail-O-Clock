@@ -1,11 +1,27 @@
 $(document).ready(function () {
     // Getting the cocktail data from local storage and storing into a new variable
     var cocktailDataObject = JSON.parse(localStorage.getItem("data"));
-
+    var cocktailImageSearch = localStorage.getItem("nameOfCocktail");
+    
     // Using the cocktail name to do the gif search
     var giphySearchTerm = cocktailDataObject[0].name; 
 
     console.log(cocktailDataObject);
+
+        // 3rd API for generating cocktail image
+        var cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
+        + cocktailImageSearch;
+
+    $.ajax({
+        url: cocktailURL,
+        method: "GET"
+    }).then(function (dbCocktail) {
+        console.log(dbCocktail);
+        
+        var cocktailImageEl = $("#cocktailImg")
+        cocktailImageEl.attr("src", dbCocktail.drinks[0].strDrinkThumb)
+        console.log(dbCocktail.drinks[0].strDrinkThumb)
+    });
 
     var apiKey = "&api_key=B1QMeeTfxi77NrOloXqbNZdThiCQkuho"
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -48,19 +64,5 @@ $(document).ready(function () {
         
     })
 
-    // 3rd API for generating cocktail image
-    var cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
-    + giphySearchTerm
-
-    $.ajax({
-        url: cocktailURL,
-        method: "GET"
-    }).then(function (dbCocktail) {
-        console.log(dbCocktail)
-        
-        var cocktailImageEl = $("#cocktail-image")
-        cocktailImageEl.attr("src", dbCocktail.drinks[0].strDrinkThumb)
-        console.log(dbCocktail.drinks[0].strDrinkThumb)
-    });
 
 });
