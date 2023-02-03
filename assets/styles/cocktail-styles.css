@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim:wght@200;300;400;500;800&display=swap');
+
 :root {
     /*--activate-borders: dashed 2px white; -- For Debugging*/
     box-sizing: border-box;
 }
 
 * {
-    font-family: 'Euclid Circular A', sans-serif;
+    font-family: 'Itim', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
     background-color: #46042a;
     color: white;
@@ -29,6 +31,7 @@
     text-transform: capitalize;
 }
 
+
 .cocktail-image {
     grid-area: cocktail-image;
     border: var(--activate-borders);
@@ -46,6 +49,10 @@
     grid-area: cocktail-method;
     border: var(--activate-borders);
     text-align: center;
+}
+
+ol li {
+    list-style-type: none;
 }
 
 .cocktail-gif {
@@ -82,7 +89,7 @@ ul {
 
 ul li {
     color: #8b6512;
-    padding: 10px;
+    padding: 5px;
 }
 
 /* ---- Footer -----*/

@@ -39,6 +39,13 @@ $(document).ready(function () {
 
         //Populates the Instructions
         $("#method").text(cocktailDataObject[0].instructions);
+
+        //Populates 5 related list items
+        // TODO - No error, but validation could be used if no related items found
+        for (let i = 1; i < 6; i++) {
+            $("#related-cocktails").append("<li>" + cocktailDataObject[i].name + "</li>");
+        }
+        
     })
 
     // 3rd API for generating cocktail image
