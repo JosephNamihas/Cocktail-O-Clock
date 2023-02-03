@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim:wght@200;300;400;500;800&display=swap');
+
 :root {
     /*--activate-borders: dashed 2px white; -- For Debugging*/
+    box-sizing: border-box;
 }
 
 * {
-    font-family: 'Euclid Circular A', sans-serif;
+    font-family: 'Itim', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
     background-color: #46042a;
     color: white;
     box-sizing: border-box;
@@ -22,6 +26,11 @@
     "cocktail-image cocktail-method related"
     "cocktail-image cocktail-gif favourites";
 }
+
+#cocktail-name {
+    text-transform: capitalize;
+}
+
 
 .cocktail-image {
     grid-area: cocktail-image;
@@ -42,6 +51,10 @@
     text-align: center;
 }
 
+ol li {
+    list-style-type: none;
+}
+
 .cocktail-gif {
     grid-area: cocktail-gif;
     border: var(--activate-borders);
@@ -49,10 +62,12 @@
 }
 
 .cocktail-gif img {
-    width: 150px;
-    height: 150px;
+    width: auto;
+    height: 200px;
     object-fit: cover;
 }
+
+/* ---- Aside Elements -----*/
 
 .related {
     grid-area: related;
@@ -74,8 +89,10 @@ ul {
 
 ul li {
     color: #8b6512;
-    padding: 10px;
+    padding: 5px;
 }
+
+/* ---- Footer -----*/
 
 footer {
     
@@ -88,7 +105,27 @@ footer {
     border-top: 6px solid #8b6512;  
 }
 
-footer p {
-    padding-left: 10%;
-    padding-right: 10%;
+
+/* ---- Button Styling -----*/
+/* Font Awesome Logos needed - Back icon and heart icon */
+
+button i, button h3 {
+    background-color: #8b6512;
+    width: 230px
+}
+
+.custom-btn {
+    color: white;
+    background-color: #8b6512;
+    border-radius: 3px 3px 3px 3px;
+    border: 1px solid #8b6512;
+    font-size: 1.5rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Sort out hover */
+.custom-btn:hover {
+    background-color: #a7801d;
+    color: white;
 }

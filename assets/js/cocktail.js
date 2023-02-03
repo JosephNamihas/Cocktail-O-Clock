@@ -1,22 +1,66 @@
-$(document).ready(function(){
-    var giphySearchTerm = "mojito"; // Example Search term -- Pulls from search bar
-    var apiKey = "&api_key=B1QMeeTfxi77NrOloXqbNZdThiCQkuho"
+$(document).ready(function () {
+    // Getting the cocktail data from local storage and storing into a new variable
+    var cocktailDataObject = JSON.parse(localStorage.getItem("data"));
 
+    // Using the cocktail name to do the gif search
+    var giphySearchTerm = cocktailDataObject[0].name; 
+
+    console.log(cocktailDataObject);
+
+    var apiKey = "&api_key=B1QMeeTfxi77NrOloXqbNZdThiCQkuho"
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    giphySearchTerm + apiKey; // Rochelle's key
-  
-        $.ajax({
+        giphySearchTerm + apiKey; 
+
+    $.ajax({
         url: queryURL,
         method: "GET"
-        }).then(function(response) {
-    
+    }).then(function (response) {
+
         console.log(response);
 
+        // Random number generator to randomly select GIF
+        var randomGIF = Math.floor(Math.random() * response.data.length);
+
+        // Populates the Cocktail Name on the cocktail page
+        var cocktailNameEl = cocktailDataObject[0].name
+        var cocktailHeaderEl = $("#cocktail-name")
+        cocktailHeaderEl.text(cocktailNameEl)
+
+        // Populates the Cocktail GIF on the cocktail page
         var cocktailGifEl = $("#cocktailGif")
-        cocktailGifEl.attr("src", response.data[0].source)
+        cocktailGifEl.attr("src", response.data[randomGIF].images.original.url)
 
-        })
-    
+        //Populates the Cocktail ingredients
+        for (let i = 0; i < cocktailDataObject[0].ingredients.length; i++) {
+     
+                $("#ingredients").append("<li>" + cocktailDataObject[0].ingredients[i] + "</li>");
+                console.log(cocktailDataObject[0].ingredients[i]);
+        }
+
+        //Populates the Instructions
+        $("#method").text(cocktailDataObject[0].instructions);
+
+        //Populates 5 related list items
+        // TODO - No error, but validation could be used if no related items found
+        for (let i = 1; i < 6; i++) {
+            $("#related-cocktails").append("<li>" + cocktailDataObject[i].name + "</li>");
+        }
         
+    })
 
-        });
+    // 3rd API for generating cocktail image
+    var cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
+    + giphySearchTerm
+
+    $.ajax({
+        url: cocktailURL,
+        method: "GET"
+    }).then(function (dbCocktail) {
+        console.log(dbCocktail)
+        
+        var cocktailImageEl = $("#cocktail-image")
+        cocktailImageEl.attr("src", dbCocktail.drinks[0].strDrinkThumb)
+        console.log(dbCocktail.drinks[0].strDrinkThumb)
+    });
+
+});
