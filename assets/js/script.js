@@ -34,6 +34,7 @@ function getCocktail(cocktailName) {
 $("#search-btn").on('click', function () {
   // Gets the users input
   var cocktailName = $("#search-input").val();
+  localStorage.setItem("nameOfCocktail", cocktailName);
 
   // Calls the above function using the users input
   getCocktail(cocktailName);
