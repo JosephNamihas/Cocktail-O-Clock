@@ -105,22 +105,22 @@ footer {
     border-top: 6px solid #8b6512;  
 }
 
-footer p {
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
 
 /* ---- Button Styling -----*/
-
+/* Font Awesome Logos needed - Back icon and heart icon */
+button {
+    padding-left: 5%;
+    padding-right: 5%;
+}
 .custom-btn {
-    color: var(--white);
-    background-color: var(--gold);
-    border-radius: 0px 3px 3px 0px;
-    border: 1px solid var(--gold);
+    color: white;
+    background-color: #8b6512;
+    border-radius: 3px 3px 3px 3px;
+    border: 1px solid #8b6512;
+    font-size: 1.5rem;
 }
 
 .custom-btn:hover {
     background-color: #a7801d;
-    color: var(--white);
+    color: white;
 }
