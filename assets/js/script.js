@@ -12,7 +12,7 @@ function getCocktail(cocktailName) {
     success: function (cocktailData) {
       // If the call is succesful the following will be executed
       console.log(cocktailData);
-
+    
       // Stored the cocktailData object into local storage
       localStorage.setItem("data", JSON.stringify(cocktailData));
 
@@ -24,7 +24,7 @@ function getCocktail(cocktailName) {
       // If the call errors the following will be executed
       console.error('Error: ', errorData.responseText);
       
-      // Todo: Create error modal
+      $("#errorModal").modal("show")
     }
   });
 };
@@ -38,3 +38,7 @@ $("#search-btn").on('click', function () {
   // Calls the above function using the users input
   getCocktail(cocktailName);
 });
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})

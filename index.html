@@ -31,6 +31,28 @@
       </div>
     </div>
   </section>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="errorModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="errorModalLabel">Error</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="errorText">Please enter your desired cocktail name or ingredient. 
+          <br>It's cocktail o' clock somewhere!</p>
+          <img src="https://via.placeholder.com/300">
+          <!-- TODO check with team whether we want a GIF or a cocktail image here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Try again!</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
