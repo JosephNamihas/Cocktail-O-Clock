@@ -39,17 +39,21 @@ $(document).ready(function () {
 
         //Populates the Instructions
         $("#method").text(cocktailDataObject[0].instructions);
-
-
-
-
-
-        
-
-
-        
-
-
     })
+
+    // 3rd API for generating cocktail image
+    var cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
+    + giphySearchTerm
+
+    $.ajax({
+        url: cocktailURL,
+        method: "GET"
+    }).then(function (dbCocktail) {
+        console.log(dbCocktail)
+        
+        var cocktailImageEl = $("#cocktail-image")
+        cocktailImageEl.attr("src", dbCocktail.drinks[0].strDrinkThumb)
+        console.log(dbCocktail.drinks[0].strDrinkThumb)
+    });
 
 });
