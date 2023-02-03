@@ -24,7 +24,7 @@ function getCocktail(cocktailName) {
       // If the call errors the following will be executed
       console.error('Error: ', errorData.responseText);
       
-      // Todo: Create error modal
+      $("#errorModal").modal('show');
     }
   });
 };
