@@ -76,6 +76,7 @@ body {
 /* Footer styling*/
 
 .footer {
+  height: 10vh;
   align-items: center;
   justify-content: center;
   display: flex;
