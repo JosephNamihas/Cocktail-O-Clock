@@ -1,74 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Poppins:wght@200;300;400;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim:wght@200;300;400;500;800&display=swap');
 
 /* Sets the box size calculation to include padding/borders */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* A list of variable for values repeadted several times */
 :root {
-    --plum: #46042a;
-    --gold: #8b6512;
-    --white: #fff;
-    --grey: #c0c0c0;
-    --background-color: #380422cc;
+  --plum: #46042a;
+  --gold: #8b6512;
+  --white: #fff;
+  --grey: #c0c0c0;
+  --background-color: #380422cc;
 }
 
 /* Set the site font to Euclid Circular A */
 body {
-  font-family: 'Itim', cursive, sans-serif;
+  font-family: 'Itim', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Styles for the large jumbotron on homepage */
 .custom-jumbotron {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(0deg, var(--background-color), var(--background-color)), url(../images/200804-2121x1414-cocktails.jpg);
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
-    height: 90vh;
-    margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(0deg, var(--background-color), var(--background-color)), url(../images/200804-2121x1414-cocktails.jpg);
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  height: 90vh;
+  margin-bottom: 0px;
 }
 
 .lead {
-    color: var(--grey);
-    font-size: 1.5rem;
+  color: var(--grey);
+  font-size: 1.5rem;
 }
 
 /* Search input styling */
 .input-group {
-    margin-top: 20px;
-    width: 40%
+  margin-top: 20px;
+  width: 40%
 }
 
 .form-control {
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
+  font-family: "Euclid Circular A", sans-serif;
 }
 
-.form-control:focus, .btn:focus {
-    border-color: #976d11;
-    box-shadow: 0 0 5px 5px rgba(167, 99, 4, 0.486);
+.form-control:focus,
+.btn:focus {
+  border-color: #976d11;
+  box-shadow: 0 0 5px 5px rgba(167, 99, 4, 0.486);
 }
 
 .search-icon {
-    margin-right: 7px;
+  display: inline;
+  margin-right: 7px;
 }
 
 /* Styling for the search button */
 .custom-btn {
-    color: var(--white);
-    background-color: var(--gold);
-    border-radius: 0px 3px 3px 0px;
-    border: 1px solid var(--gold);
+  color: var(--white);
+  background-color: var(--gold);
+  border-radius: 3px;
+  border: 1px solid var(--gold);
+  width: 100%;
 }
 
 .custom-btn:hover {
-    background-color: #a7801d;
-    color: var(--white);
+  background-color: #a7801d;
+  color: var(--white);
 }
 
 /* Footer styling 
@@ -83,7 +85,7 @@ body {
 }*/
 
 /*slideshow*/
-.slideshow{
+.slideshow {
   align-items: center;
   justify-content: center;
   display: flex;
@@ -93,33 +95,42 @@ body {
   border-top: 6px solid var(--gold);
 }
 
-.slideshow-link{
+.slideshow-link {
   width: 8%;
   filter: brightness(0.5);
   transition: filter 1.5s;
 }
 
-.slideshow-link:nth-child(1), 
-.slideshow-link:nth-child(5){
+.slideshow-link:nth-child(1),
+.slideshow-link:nth-child(5) {
   transition: width 0.5s,
-  opacity 0.5s;
+    opacity 0.5s;
 }
 
-.slideshow-link:nth-child(3){
+.slideshow-link:nth-child(3) {
   transition: filter 0.5s;
 }
 
-.slideshow-link img{
+.slideshow-link img {
   width: 100%;
   padding: 0 1rem;
 }
 
-.faded-out{
-opacity: 0;
-width: 0;
+.faded-out {
+  opacity: 0;
+  width: 0;
 }
 
-.light{
+.light {
   filter: brightness(1);
 }
+
 /*end of slideshow*/
+
+/* Media Queries */
+@media only screen and (max-width: 767px) {
+  .custom-btn {
+    width: 25%;
+    margin-top: 20px;
+  }
+}

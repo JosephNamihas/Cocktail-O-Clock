@@ -12,18 +12,18 @@ function getCocktail(cocktailName) {
     success: function (cocktailData) {
       // If the call is succesful the following will be executed
       console.log(cocktailData);
-      
+
       // Stored the cocktailData object into local storage
       localStorage.setItem("data", JSON.stringify(cocktailData));
-      
+
       // Load the cocktail page view
-      window.location='./cocktail.html';
+      window.location = './cocktail.html';
       return;
     },
-    error: function ajaxError(jqXHR) {
+    error: function ajaxError(errorData) {
       // If the call errors the following will be executed
-      console.error('Error: ', jqXHR.responseText);
-
+      console.error('Error: ', errorData.responseText);
+      
       // Todo: Create error modal
     }
   });
