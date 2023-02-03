@@ -31,9 +31,13 @@ function getCocktail(cocktailName) {
 
 
 // Event listener for when the user clicks on the search button
-$("#search-btn").on('click', function () {
+$("#search-btn").on('click',function(event){
+  event.preventDefault();
   // Gets the users input
-  var cocktailName = $("#search-input").val();
+  var cocktailName = $("#search-input").val().trim();
+  //clear input box after search
+  $("#search-input").val("");
+
   localStorage.setItem("nameOfCocktail", cocktailName);
 
   // Calls the above function using the users input
