@@ -61,8 +61,15 @@ $(document).ready(function () {
         for (let i = 1; i < 6; i++) {
             $("#related-cocktails").append("<li>" + cocktailDataObject[i].name + "</li>");
         }
-        
+
+        $("#add-to-favourites").on('click', function () {
+            // Saves to favourites 
+            $("#favourite-cocktails").append("<li>" + cocktailDataObject[0].name + "</li>");
+
+            // TODO Need to make favourites clickable and to bring up search
+            // TODO Validation - Can't enter more than once? Use Local Storage?
+        }
+    )
+    
     })
-
-
 });
