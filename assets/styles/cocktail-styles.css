@@ -128,3 +128,24 @@ button i, button h3 {
     background-color: #a7801d;
     color: white;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 767px) {
+   .custom-btn {
+    display: inline-flex;
+    justify-content: center;
+    width: 25%;
+    margin-top: 20px;
+    font-size: 15px;
+    /* TODO amend icon positions and sizes to be responsive */
+  }
+
+}
+
+
+
+
+
+
+
+
