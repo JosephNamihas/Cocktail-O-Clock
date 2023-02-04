@@ -125,24 +125,32 @@ ol li {
     perspective: 20rem;
 }
 
-/* ---- Aside Elements -----*/
+/* ---- section-3 -----*/
+.section-3 {
+  padding-bottom: 30px;
+}
 
 .related {
     grid-area: related;
     border: var(--activate-borders);
     text-align: right;
     color: #8b6512;
+    position: relative;
+    padding: 20px;
+    border-right: 1px solid #8b6512;
 }
 
 .favourites {
     grid-area: favourites;
     border: var(--activate-borders);
-    text-align: right;
+    text-align: left;
     color: #8b6512;
-}
+    position: relative;
+    padding: 20px;
+    }
 
 ul {
-     list-style-type: none;
+    list-style-type: none;
 }
 
 ul li {
@@ -166,9 +174,9 @@ footer {
 
 /* ---- Button Styling -----*/
 
-button i, button h3 {
+button i, button h5 {
     background-color: #8b6512;
-    width: 230px
+   
 }
 
 .custom-btn {
