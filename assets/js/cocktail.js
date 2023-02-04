@@ -2,7 +2,8 @@ $(document).ready(function () {
     // Getting the cocktail data from local storage and storing into a new variable
     var cocktailDataObject = JSON.parse(localStorage.getItem("data"));
     var cocktailImageSearch = localStorage.getItem("nameOfCocktail");
-    
+
+
     // Using the cocktail name to do the gif search
     var giphySearchTerm = cocktailDataObject[0].name; 
 
@@ -57,19 +58,30 @@ $(document).ready(function () {
         $("#method").text(cocktailDataObject[0].instructions);
 
         //Populates 5 related list items
-        // TODO - No error, but validation could be used if no related items found
         for (let i = 1; i < 6; i++) {
             $("#related-cocktails").append("<li>" + cocktailDataObject[i].name + "</li>");
         }
 
         $("#add-to-favourites").on('click', function () {
             // Saves to favourites 
-            $("#favourite-cocktails").append("<li>" + cocktailDataObject[0].name + "</li>");
+            localStorage.setItem("favourite-cocktail", cocktailDataObject[0].name);
 
-            // TODO Need to make favourites clickable and to bring up search
-            // TODO Validation - Can't enter more than once? Use Local Storage?
-        }
-    )
+         })
+
+         // TODO - 
+
+                 // Function to fetch favourites in localStorage + append to list
+                 function fetchFavourites() {
+                    var cocktailFavouriteEl = JSON.parse(localStorage.getItem("favourite-cocktail"));
+                    $("#favourite-cocktails").append("<li>" + cocktailFavouriteEl + "</li>");
+                }
+
+                fetchFavourites();
+    
     
     })
 });
+
+
+        // TODO - Setting favourites to local storage. May need to be pushed into an array
+        // TODO - Getting favourites from array.
