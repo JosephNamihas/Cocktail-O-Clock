@@ -58,32 +58,31 @@ $(document).ready(function () {
         $("#method").text(cocktailDataObject[0].instructions);
 
 
-        // TODO - Only lists text. Need to make them links.
+        // TODO - Only lists text. Need to make them links ideally? 
+        // TODO - Work in progress!
+
+        var btn = $("button");
         //Populates 5 related list items
         for (let i = 1; i < 6; i++) {
-            $("#related-cocktails").append("<li><a>" + cocktailDataObject[i].name + "</a></li>");
+
+            $("related-cocktails").append("<li><a>" + cocktailDataObject[i].name + "</a></li>").attr("href", ); 
+
+
+            /*$("#related-buttons").append("<li>" + cocktailDataObject[i].name + "</li>".attr());*/
+            // Can't target attribute. innerHTML? target child? 
         }
+
+        // TODO - 
 
         $("#add-to-favourites").on('click', function () {
             // Saves to favourites 
-            localStorage.setItem("favourite-cocktail", cocktailDataObject[0].name);
+            localStorage.setItem("favourite-cocktail", cocktailDataObject[0].name); // May need to store in object / array otherwise key gets overwritten
+            $("#favourite-cocktails").append("<li>" + cocktailDataObject[0].name + "</li>");
+
 
          })
 
-         // TODO - 
-
-                 // Function to fetch favourites in localStorage + append to list
-                 function fetchFavourites() {
-                    var cocktailFavouriteEl = JSON.parse(localStorage.getItem("favourite-cocktail"));
-                    $("#favourite-cocktails").append("<li>" + cocktailFavouriteEl + "</li>");
-                }
-
-                fetchFavourites();
-    
     
     })
 });
 
-
-        // TODO - Setting favourites to local storage. May need to be pushed into an array
-        // TODO - Getting favourites from array.
