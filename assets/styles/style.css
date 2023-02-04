@@ -73,6 +73,46 @@ body {
   color: var(--white);
 }
 
+/* Modal styling */
+
+.modal {
+  color: white;
+}
+
+.modal-content {
+  background-color: #fff;
+}
+
+.modal-header {
+  background-color: #46042a;
+}
+
+.btn-close {
+ background-color: #ffffff
+}
+
+.modal-footer {
+  border-color: #46042a;
+  border-top-width: 3px;
+  justify-content: center;
+  padding: 10px;
+  background-color: #46042b27;
+}
+
+.btn-primary {
+  background-color: #a7801d;
+  border: #a7801d;
+  --bs-btn-hover-bg:var(--plum)
+  /* TODO check with team about hover border color - currently makes button disappear onto white background */
+  }
+
+.modal-body {
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 20px;
+  color: #46042a;
+}
+
 /* Footer styling*/
 
 .footer {
