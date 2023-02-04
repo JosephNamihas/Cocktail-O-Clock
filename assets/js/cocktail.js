@@ -57,9 +57,11 @@ $(document).ready(function () {
         //Populates the Instructions
         $("#method").text(cocktailDataObject[0].instructions);
 
+
+        // TODO - Only lists text. Need to make them links.
         //Populates 5 related list items
         for (let i = 1; i < 6; i++) {
-            $("#related-cocktails").append("<li>" + cocktailDataObject[i].name + "</li>");
+            $("#related-cocktails").append("<li><a>" + cocktailDataObject[i].name + "</a></li>");
         }
 
         $("#add-to-favourites").on('click', function () {
