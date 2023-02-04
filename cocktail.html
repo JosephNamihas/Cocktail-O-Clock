@@ -4,43 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cocktail O'Clock</title>
     <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link href="https://fonts.cdnfonts.com/css/euclid-circular-a" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets\styles\cocktail-styles.css">
+
+    <title>Cocktail O'Clock</title>
   </head>
+
   <body>
+    <section class="container-fluid">
+      <!--Main heading-->
+      <header class="row">
+        <div class="col-12 text-center">
+            <h1>Cocktail O'Clock</h1>
+        </div>
+      </header>
+      <!--End of main heading-->
+    </section>
 
-  <div id="main-container">
-      <div class="cocktail-image"><img id ="cocktailImg" src="https://via.placeholder.com/300" alt="Your cocktail of choice"></div> <!--Placeholder img - Cocktail img appends into here-->
-      <div class="cocktail-method">
-        <h1 id="cocktail-name">Cocktail Name</h1> <!--Name of cocktail appends here-->
-        <p>Cocktail ingredients</p>
-        <ol id="ingredients"> <!-- Ingredients array item append here--></ol>
-        <p id="method">Instructions on how to mix up the cocktail of choice</p>
+ <!--Page container-->
+    <section id="main-container container">
+      <div class="row">
+        <div class="cocktail-image"><img id ="cocktailImg" src="https://via.placeholder.com/300" alt="Your cocktail of choice">
+          <!--Placeholder img - Cocktail img appends into here-->
+        </div>
+
+        <div class="cocktail-method col-md-4 col-sm-3">
+          <h2 id="cocktail-name">Cocktail Name</h2> 
+          <!--Name of cocktail appends here-->
+          <p>Cocktail ingredients</p>
+          <ol id="ingredients"> 
+            <!-- Ingredients array item append here-->
+          </ol>
+          <p id="method">Instructions on how to mix up the cocktail of your choice</p>
+        </div>
+
+        <div class="cocktail-gif col-md-3 col-sm-3"><img id="cocktailGif" src=""></div>
+        <!-- GIF here -->
       </div>
-      <div class="cocktail-gif"><img id="cocktailGif" src=""></div>
-      <div class="related"><h2>Related</h2>
-        <ul id="related-cocktails"> <!-- Placeholders until JS appends to UL-->
-        </ul>
-      </div>
-      <div class="favourites"><h2>Favourites</h2>
-        <ul id="favourite-cocktails"> <!-- Placeholders until JS appends to UL-->
-        </ul>
-      </div>
-  </div>
+      
+        <div class="related col-md-3 col-sm-3">
+          <h3>Related</h3>
+          <ul id="related-cocktails"> 
+            <!-- Placeholders until JS appends to UL-->
+          </ul>
+        </div>
 
-  <footer>
-    <button class ="btn custom-btn" id="back-to-search" onclick="history.back()"><h3>Back to Search</h3>  <i class="fas fa-undo"></i></button> 
-    <button class ="btn custom-btn" id="add-to-favourites"><h3>Add to Favourites</h3>  <i class="fa-solid fa-heart"></i></button>
-  </footer>
+        <div class="favourites col-md-3 col-sm-3">
+          <h3>Favourites</h3>
+          <ul id="favourite-cocktails"> 
+            <!-- Placeholders until JS appends to UL-->
+          </ul>
+        </div>
+        
+    </section>
+    <!--End of page container-->
 
-  <!-- Implement col system for responsiveness and layout -->
+    <footer>
+      <button class ="btn custom-btn" id="back-to-search" onclick="history.back()"><h3>Back to Search</h3>  <i class="fas fa-undo"></i></button> 
+      <button class ="btn custom-btn" id="add-to-favourites"><h3>Add to Favourites</h3>  <i class="fa-solid fa-heart"></i></button>
+    </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="./assets/js/script.js"></script>
-  <script src="./assets/js/cocktail.js"></script>
+    <!-- Implement col system for responsiveness and layout -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/cocktail.js"></script>
 
   </body>
 
