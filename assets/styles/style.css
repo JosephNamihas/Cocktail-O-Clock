@@ -83,6 +83,11 @@ body {
   background-color: #fff;
 }
 
+.modal #errorText {
+  padding: 10px;
+  font-size: large;
+}
+
 .modal-header {
   background-color: #46042a;
 }
@@ -111,6 +116,18 @@ body {
   padding: 10px;
   padding-bottom: 20px;
   color: #46042a;
+}
+
+.modal-image {
+  padding-bottom: 20px;
+}
+
+.modal .h5 {
+  margin-top: 10px;
+}
+
+.modal .randomCocktail {
+  text-decoration: none;
 }
 
 /* Footer styling*/
@@ -146,3 +163,12 @@ body {
     margin-top: 20px;
   }
 }
+
+@media only screen and (max-width: 481px) {
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+  }
+  }
