@@ -19,6 +19,37 @@ body {
   font-family: 'Itim', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Nav styling */
+
+.navbar {
+  height: 90px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  width: cover;
+  background-color: var(--plum);
+  border-bottom: 4px solid var(--gold);
+}
+
+.navbar {
+  background-image: linear-gradient(to right, #8b6512, #46042a)
+}
+
+.navbar img:hover{
+  filter: brightness(1.50);
+}
+
+.navbar-link {
+  filter: brightness(0.7);
+}
+
+.navbar-link img {
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+/*end of footer*/
+
 /* Styles for the large jumbotron on homepage */
 .custom-jumbotron {
   display: flex;
