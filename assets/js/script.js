@@ -51,3 +51,8 @@ $("#search-input").on("keyup", function (event) {
       $("#search-btn").click();
   };
 });
+
+
+// TODO - Add momentJS? 
+//var currentTime = moment().hours();
+//var interval = setInterval(updateTime, 1000);
