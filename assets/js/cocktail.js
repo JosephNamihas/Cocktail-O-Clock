@@ -1,32 +1,32 @@
-$(document).ready(function () {
-    // Getting the cocktail data from local storage and storing into a new variable
-    var cocktailDataObject = JSON.parse(localStorage.getItem("data"));
-    var cocktailImageSearch = localStorage.getItem("nameOfCocktail");
+// Getting the cocktail data from local storage and storing into a new variable
+var cocktailDataObject = JSON.parse(localStorage.getItem("data"));
+var cocktailImageSearch = localStorage.getItem("nameOfCocktail");
 
+// Using the cocktail name to do the gif search
+var giphySearchTerm = cocktailDataObject[0].name;
 
-    // Using the cocktail name to do the gif search
-    var giphySearchTerm = cocktailDataObject[0].name; 
+console.log(cocktailDataObject);
 
-    console.log(cocktailDataObject);
-
-        // 3rd API for generating cocktail image
-        var cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
+function retrieveCocktailImage() {
+    // 3rd API for generating cocktail image
+    var cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
         + cocktailImageSearch;
 
     $.ajax({
         url: cocktailURL,
         method: "GET"
     }).then(function (dbCocktail) {
-        console.log(dbCocktail);
-        
-        var cocktailImageEl = $("#cocktailImg")
-        cocktailImageEl.attr("src", dbCocktail.drinks[0].strDrinkThumb)
-        console.log(dbCocktail.drinks[0].strDrinkThumb)
-    });
 
+        var cocktailImageEl = $("#cocktailImg");
+        cocktailImageEl.attr("src", dbCocktail.drinks[0].strDrinkThumb);
+
+    });
+};
+
+function retrieveGifImage() {
     var apiKey = "&api_key=B1QMeeTfxi77NrOloXqbNZdThiCQkuho"
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        giphySearchTerm + apiKey; 
+        giphySearchTerm + apiKey;
 
     $.ajax({
         url: queryURL,
@@ -49,40 +49,41 @@ $(document).ready(function () {
 
         //Populates the Cocktail ingredients
         for (let i = 0; i < cocktailDataObject[0].ingredients.length; i++) {
-     
-                $("#ingredients").append("<li>" + cocktailDataObject[0].ingredients[i] + "</li>");
-                console.log(cocktailDataObject[0].ingredients[i]);
+
+            $("#ingredients").append("<li>" + cocktailDataObject[0].ingredients[i] + "</li>");
+            console.log(cocktailDataObject[0].ingredients[i]);
         }
 
         //Populates the Instructions
         $("#method").text(cocktailDataObject[0].instructions);
 
-
         // TODO - Only lists text. Need to make them links ideally? 
         // TODO - Work in progress!
 
-        var btn = $("button");
         //Populates 5 related list items
         for (let i = 1; i < 6; i++) {
 
-            $("related-cocktails").append("<li><a>" + cocktailDataObject[i].name + "</a></li>").attr("href", ); 
+            $("#related-cocktails").append(`<li><a href="./cocktail.html">${cocktailDataObject[i].name}</a></li>`);
 
+            localStorage.setItem("nameOfCocktail", cocktailDataObject[i].name);
 
             /*$("#related-buttons").append("<li>" + cocktailDataObject[i].name + "</li>".attr());*/
             // Can't target attribute. innerHTML? target child? 
-        }
-
-        // TODO - 
+        };
 
         $("#add-to-favourites").on('click', function () {
             // Saves to favourites 
             localStorage.setItem("favourite-cocktail", cocktailDataObject[0].name); // May need to store in object / array otherwise key gets overwritten
             $("#favourite-cocktails").append("<li>" + cocktailDataObject[0].name + "</li>");
 
+        });
+    });
+};
 
-         })
+$(document).ready(function () {
 
-    
-    })
+    retrieveCocktailImage();
+
+    retrieveGifImage();
+
 });
-
