@@ -47,13 +47,6 @@ body {
 
 /* Main section- Section-2 */
 
-/*#main-container {
-    align-items: center;
-    grid-template-areas:
-    "cocktail-image cocktail-method related"
-    "cocktail-image cocktail-gif favourites";
-}*/
-
 .jumbotron {
     background-color: var(--plum);
     margin-bottom: 0;
@@ -76,7 +69,6 @@ body {
 }
 
 .cocktail-image {
-    /*grid-area: cocktail-image;*/
     border: var(--activate-borders);
     width: 350px;
     height: 350px;
@@ -123,7 +115,6 @@ body {
 }
 
 .cocktail-method {
-    /*grid-area: cocktail-method;*/
     border: var(--activate-borders);
     text-align: center;
     margin-top: 30px;
@@ -135,7 +126,6 @@ ol li {
 }
 
 .cocktail-gif {
-    /*grid-area: cocktail-gif;*/
     border: var(--activate-borders);
 }
 
@@ -162,7 +152,6 @@ ol li {
 
 .related,
 .favourites {
-    /*grid-area: related;*/
     border: var(--activate-borders);
     text-align: right;
     color: var(--gold);
@@ -171,7 +160,6 @@ ol li {
 }
 
 .favourites {
-    /* grid-area: favourites;*/
     text-align: left;
     border-left: 1px solid var(--gold);
 }
