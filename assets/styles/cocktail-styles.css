@@ -7,9 +7,8 @@ body {
   height: 100%;
 }
 
+/*set root colour*/
 :root {
-    /*--activate-borders: dashed 2px white; -- For Debugging*/
-    box-sizing: border-box;
     --gold: #8b6512;
     --plum: #46042a;
     --gold-border: #e9a91f;
@@ -20,7 +19,6 @@ body {
     font-weight: 400;
     background-color: var(--plum);
     color: white;
-    box-sizing: border-box;
 }
 
 /* Nav styling */
@@ -50,21 +48,14 @@ body {
   }
 
 /* Main section- Section-2 */
-
-/*#main-container {
-    align-items: center;
-    grid-template-areas:
-    "cocktail-image cocktail-method related"
-    "cocktail-image cocktail-gif favourites";
-}*/
-
 #cocktail-name {
     text-transform: capitalize;
     padding: 20px;
 }
 
 h1 {
-    padding: 5%;
+    text-align: right;
+    padding: 50px;
 }
 
 .row {
@@ -73,8 +64,6 @@ h1 {
 }
 
 .cocktail-image {
-    /*grid-area: cocktail-image;*/
-    border: var(--activate-borders);
     width: 350px;
     height: 350px;
     overflow: hidden;
@@ -117,11 +106,25 @@ h1 {
 }
 
 .cocktail-method {
-    /*grid-area: cocktail-method;*/
-    border: var(--activate-borders);
     text-align: center;
     padding-top: 30px;
     padding-left: 70px;
+}
+
+.cocktail-method h2 {
+    text-decoration-line: underline;
+    text-decoration-style: dotted; 
+    text-decoration-color: var(--gold);   
+}
+
+#copy {
+    margin-left: 10px;
+    opacity: 0.7;
+}
+
+#copy:hover {
+    cursor: pointer;
+    opacity: 1;
 }
 
 ol {
@@ -135,8 +138,6 @@ ol li {
 }
 
 .cocktail-gif {
-    /*grid-area: cocktail-gif;*/
-    border: var(--activate-borders);
     text-align: center;
     padding-top: 30px;
     padding-left: 70px;
@@ -164,8 +165,6 @@ ol li {
 }
 
 .related {
-    /*grid-area: related;*/
-    border: var(--activate-borders);
     text-align: right;
     color: var(--gold);
     position: relative;
@@ -173,8 +172,6 @@ ol li {
 }
 
 .favourites {
-   /* grid-area: favourites;*/
-    border: var(--activate-borders);
     text-align: left;
     color: var(--gold);
     position: relative;
