@@ -13,6 +13,25 @@
   <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 
+
+<!-- Added navbar with social media icons -->
+<nav>
+  <div class="navbar">
+    <a href="https://instagram.com" class="navbar-link" target="_blank">
+     <img src="assets/images/Instagram.png" alt="Instagram icon">
+    </a>
+    <a href="https://twitter.com" class="navbar-link" target="_blank">
+      <img src="assets/images/Twitter.png" alt="Twitter icon">
+     </a>
+     <a href="https://www.facebook.com" class="navbar-link" target="_blank">
+      <img src="assets/images/Facebook.png" alt="Facebook icon">
+     </a>
+     <a href="https://whatsapp.com" class="navbar-link" target="_blank">
+      <img src="assets/images/Whatsapp.png" alt="Whatsapp icon">
+     </a>
+  </div>
+</nav>
+
 <body>
   <!-- Jumbotron -->
   <section class="jumbotron jumbotron-fluid text-center custom-jumbotron">
@@ -38,16 +57,20 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="errorModalLabel">Error</h5>
+          <h4 class="modal-title" id="errorModalLabel">Uh oh!</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <p id="errorText">Please enter your desired cocktail name or ingredient. 
           <br>It's cocktail o' clock somewhere!</p>
-          <img src="https://via.placeholder.com/300">
-          <!-- TODO check with team whether we want a GIF or a cocktail image here -->
-        </div>
+          <!-- GIF in here to reinforce error message -->
+          <img src="assets/images/Facepalm.gif" class="modal-image">
+          <!-- Link to a cocktail suggestion -->
+          <h4 class="modal-link">Why not try a <a href="cocktail.html" class="randomCocktail">'cocktail-name'</a> instead?</h4>
+           </div>
+            <!-- TODO is there a way to randomly generate a cocktail name and link to go in this part of the modal? -->
         <div class="modal-footer">
+          <!-- Button to take user back to search field -->
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Try again!</button>
         </div>
       </div>
