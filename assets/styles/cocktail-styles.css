@@ -19,32 +19,6 @@ body {
     color: white;
 }
 
-/* Nav styling */
-
-/* TODO fix bug with background of buttons */
-
-.navbar {
-    height: 90px;
-    align-items: flex-end;
-    justify-content: flex-end;
-    display: flex;
-    width: cover;
-    background-color: var(--plum);
-    border-bottom: 4px solid var(--gold);
-}
-
-.navbar {
-    background-image: linear-gradient(to right, #8b6512, #46042a)
-}
-
-.navbar img:hover {
-    filter: brightness(1.50);
-}
-
-.navbar-link {
-    filter: brightness(0.7);
-}
-
 /* Main section- Section-2 */
 
 .jumbotron {
@@ -95,6 +69,15 @@ body {
     animation: imgAnim 4s 0.2s;
     opacity: 1;
 }
+
+.social-icons img:hover{
+    filter: brightness(1.50);
+}
+      
+.social-link {
+    filter: brightness(0.7);
+}
+
 
 @keyframes imgAnim {
     0% {
