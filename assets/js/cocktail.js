@@ -2,16 +2,8 @@
 var cocktailDataObject = JSON.parse(localStorage.getItem("data"));
 var cocktailImageSearch = localStorage.getItem("nameOfCocktail");
 
-// Validation for non-existant cocktail 
-if (cocktailDataObject.length === 0) {
-    window.location = './index.html';
-    // Display Modal
-}
-
 // Using the cocktail name to do the gif search
 var giphySearchTerm = cocktailDataObject[0].name;
-
-console.log(cocktailDataObject);
 
 function retrieveCocktailImage() {
     // 3rd API for generating cocktail image
@@ -39,8 +31,6 @@ function retrieveGifImage() {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-
-        console.log(response);
 
         // Random number generator to randomly select GIF
         var randomGIF = Math.floor(Math.random() * response.data.length);
@@ -70,11 +60,18 @@ function retrieveGifImage() {
         //Populates 5 related list items
         for (let i = 1; i < 6; i++) {
 
-            $("#related-cocktails").append(`<li><a href="./cocktail.html">${cocktailDataObject[i].name}</a></li>`);
+            $("#related-cocktails").append(`<li><a href="./cocktail.html" class="relatedCocktailLink">${cocktailDataObject[i].name}</a></li>`);
 
-            /*$("#related-buttons").append("<li>" + cocktailDataObject[i].name + "</li>".attr());*/
-            // Can't target attribute. innerHTML? target child? 
-        };
+            $(".relatedCocktailLink").on('click', function (event) {
+                event.preventDefault();
+                var cocktailName = cocktailDataObject[i].name;
+
+                localStorage.setItem("nameOfCocktail", cocktailName);
+
+                // Calls the below function using the users input
+                getRelatedCocktail(cocktailName);
+            });
+        }
 
         $("#add-to-favourites").on('click', function () {
             // Saves to favourites 
@@ -82,6 +79,30 @@ function retrieveGifImage() {
             $("#favourite-cocktails").append("<li>" + cocktailDataObject[0].name + "</li>");
 
         });
+    });
+};
+
+function getRelatedCocktail(cocktailName) {
+    // ajax call to get the cocktail data from the users input
+    $.ajax({
+        method: 'GET',
+        url: 'https://api.api-ninjas.com/v1/cocktail?name=' + cocktailName,
+        headers: { 'X-Api-Key': 'oG7S2vqNUXRwDPUivFn60w==v3SxU4nBy9O504CG' },
+        contentType: 'application/json',
+        success: function (cocktailData) {
+            // If the call is succesful the following will be executed
+            console.log(cocktailData);
+
+            // Stored the cocktailData object into local storage
+            localStorage.setItem("data", JSON.stringify(cocktailData));
+
+            window.location = './cocktail.html';
+        },
+        error: function ajaxError(errorData) {
+            // If the call errors the following will be executed
+            console.error('Error: ', errorData.responseText);
+
+        }
     });
 };
 
