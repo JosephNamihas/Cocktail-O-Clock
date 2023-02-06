@@ -1,6 +1,7 @@
 // Getting the cocktail data from local storage and storing into a new variable
 var cocktailDataObject = JSON.parse(localStorage.getItem("data"));
 var cocktailImageSearch = localStorage.getItem("nameOfCocktail");
+var storageArray = []; // Used to store favourites
 
 // Using the cocktail name to do the gif search
 var giphySearchTerm = cocktailDataObject[0].name;
@@ -71,14 +72,12 @@ function retrieveGifImage() {
                 // Calls the below function using the users input
                 getRelatedCocktail(cocktailName);
             });
+
+            // Gets the favourites from local storage
+
+            //$("#favourite-cocktails").append("<li>" + cocktailDataObject[0].name + "</li>");
         }
 
-        $("#add-to-favourites").on('click', function () {
-            // Saves to favourites 
-            localStorage.setItem("favourite-cocktail", cocktailDataObject[0].name); // May need to store in object / array otherwise key gets overwritten
-            $("#favourite-cocktails").append("<li>" + cocktailDataObject[0].name + "</li>");
-
-        });
     });
 };
 
@@ -106,10 +105,20 @@ function getRelatedCocktail(cocktailName) {
     });
 };
 
+function loadStorage() {
+    console.log("Loading");
+
+            localStorage.getItem(("Favourite-Cocktail", JSON.parse(storageArray)));
+            console.log(storageArray);
+
+            for(let i = 0; i < storageArray.length; i++) {
+                $("#favourite-cocktails").append("<li>" + storageArray[i] + "</li>");
+            } 
+        }
+
 $(document).ready(function () {
 
     retrieveCocktailImage();
-
     retrieveGifImage();
 
 });
@@ -131,3 +140,29 @@ function copyRecipe() {
       console.log("Browser not compatible") // for checking if errors
     }
 } 
+
+    loadStorage(); // Loads faviroutes on refresh*/
+});
+
+$("#add-to-favourites").on('click', function () {
+    // Saves to favourites / local Storage
+    console.log("Clicked");
+    console.log(cocktailDataObject[0].name);
+    storageArray.push(cocktailDataObject[0].name);
+    console.log(storageArray);
+    //localStorage.setItem("favourite-cocktail", cocktailDataObject[0].name); // May need to store in object / array otherwise key gets overwritten
+    localStorage.setItem("Favourite-Cocktail", JSON.stringify(storageArray));
+    $("#favourite-cocktails").append("<li>" + cocktailDataObject[0].name + "</li>");
+
+});
+
+/*function loadStorage() {
+
+        localStorage.getItem(("Favourite-Cocktail", JSON.parse(storageArray)));
+            console.log(storageArray);
+
+            for(let i = 0; i < storageArray.length; i++) {
+                $("#favourite-cocktails").append("<li>" + storageArray[i] + "</li>");
+            } 
+}*/
+
