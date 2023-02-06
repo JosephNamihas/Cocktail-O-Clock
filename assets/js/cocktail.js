@@ -16,6 +16,7 @@ function retrieveCocktailImage() {
         url: cocktailURL,
         method: "GET"
     }).then(function (dbCocktail) {
+        console.log(dbCocktail)
 
         var cocktailImageEl = $("#cocktailImg");
         cocktailImageEl.attr("src", dbCocktail.drinks[0].strDrinkThumb);
@@ -64,8 +65,6 @@ function retrieveGifImage() {
         for (let i = 1; i < 6; i++) {
 
             $("#related-cocktails").append(`<li><a href="./cocktail.html">${cocktailDataObject[i].name}</a></li>`);
-
-            localStorage.setItem("nameOfCocktail", cocktailDataObject[i].name);
 
             /*$("#related-buttons").append("<li>" + cocktailDataObject[i].name + "</li>".attr());*/
             // Can't target attribute. innerHTML? target child? 
