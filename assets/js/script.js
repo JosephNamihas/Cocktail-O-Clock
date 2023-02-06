@@ -75,8 +75,3 @@ $("#search-input").on("keyup", function (event) {
 $("#tryAgain").on('click', function () {
   $("#randomCocktail").html("");
 });
-
-// TODO - Add momentJS? 
-//var currentTime = moment().hours();
-//var interval = setInterval(updateTime, 1000);
-
