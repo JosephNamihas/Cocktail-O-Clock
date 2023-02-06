@@ -113,3 +113,21 @@ $(document).ready(function () {
     retrieveGifImage();
 
 });
+
+// Making function for the copy icon to copy recipe
+function copyRecipe() {
+    var textCopy = document.getElementById("recipe").innerText;
+    var textElem = document.createElement("textarea");
+      document.body.appendChild(textElem);
+      textElem.value = textCopy;
+      textElem.select();
+
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(textCopy).then(() => {
+        //alert("Copied!"); // for checking if it works? /
+        //!make a modal???("Copied!");
+      })
+    } else {
+      console.log("Browser not compatible") // for checking if errors
+    }
+} 
