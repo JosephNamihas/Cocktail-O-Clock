@@ -53,6 +53,12 @@ Joe -
 
 ## Usage (Screenshots / Video)
 
+Screenshot of the Index HTML page:
+![Index HTML](/assets/images/IndexHTML.png)
+
+Screenshot of the Cocktail HTML which displays the user's search results:
+![Cocktail HTML](/assets/images/CocktailHTML.png)
+
 ## Installation (Link to Pages and how to use app)
 
 ## Credits
