@@ -120,6 +120,27 @@ $(document).ready(function () {
 
     retrieveCocktailImage();
     retrieveGifImage();
+
+});
+
+// Making function for the copy icon to copy recipe
+function copyRecipe() {
+    var textCopy = document.getElementById("recipe").innerText;
+    var textElem = document.createElement("textarea");
+      document.body.appendChild(textElem);
+      textElem.value = textCopy;
+      textElem.select();
+
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(textCopy).then(() => {
+        //alert("Copied!"); // for checking if it works? /
+        //!make a modal???("Copied!");
+      })
+    } else {
+      console.log("Browser not compatible") // for checking if errors
+    }
+} 
+
     loadStorage(); // Loads faviroutes on refresh*/
 });
 
@@ -137,10 +158,11 @@ $("#add-to-favourites").on('click', function () {
 
 /*function loadStorage() {
 
-            localStorage.getItem(("Favourite-Cocktail", JSON.parse(storageArray)));
+        localStorage.getItem(("Favourite-Cocktail", JSON.parse(storageArray)));
             console.log(storageArray);
 
             for(let i = 0; i < storageArray.length; i++) {
                 $("#favourite-cocktails").append("<li>" + storageArray[i] + "</li>");
             } 
-        }*/
+}*/
+
