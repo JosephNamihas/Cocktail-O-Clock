@@ -6,17 +6,19 @@ function getCocktail(cocktailName) {
     headers: { 'X-Api-Key': 'oG7S2vqNUXRwDPUivFn60w==v3SxU4nBy9O504CG' },
     contentType: 'application/json',
     success: function (cocktailData) {
-
-
       // If the call is succesful the following will be executed
       console.log(cocktailData);
 
       // Stored the cocktailData object into local storage
       localStorage.setItem("data", JSON.stringify(cocktailData));
 
-      // Load the cocktail page view
-      window.location = './cocktail.html';
-      return;
+      // Validation for non-existant cocktail 
+      if (cocktailData.length === 0) {
+        $("#errorModal").modal('show');
+        getRandom();
+      } else {
+        window.location = './cocktail.html';
+      }
     },
     error: function ajaxError(errorData) {
       // If the call errors the following will be executed
@@ -31,7 +33,7 @@ function getCocktail(cocktailName) {
 
 //Function to select a random cocktail from a popular list of cocktails
 function getRandom() {
-  var randomCocktail = popularCocktails[Math.floor(Math.random()*popularCocktails.length)];
+  var randomCocktail = popularCocktails[Math.floor(Math.random() * popularCocktails.length)];
 
   $("#randomCocktail").append(`<a href="#" id="randomCocktailLink">${randomCocktail}</a>`);
 
