@@ -119,7 +119,6 @@ $(document).ready(function () {
 
     retrieveCocktailImage();
     retrieveGifImage();
-
     loadStorage(); // Loads favourites on refresh in the ready function
 
 
@@ -142,9 +141,6 @@ function copyRecipe() {
       console.log("Browser not compatible") // for checking if errors
     }
 } 
-
-    loadStorage(); // Loads faviroutes on refresh*/
-
 
 $("#add-to-favourites").on('click', function () {
     // Pushes current cocktail to empty array (storageArray)
