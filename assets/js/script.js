@@ -72,6 +72,6 @@ $("#search-input").on("keyup", function (event) {
 });
 
 // Clears the html and local storage when the user clicks try again as it appended multiple suggestions
-$("#tryAgain").on('click', function () {
+$(".tryAgain").on('click', function () {
   $("#randomCocktail").html("");
 });
