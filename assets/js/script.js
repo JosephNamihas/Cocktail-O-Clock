@@ -1,7 +1,3 @@
-// Global variable to store user's search input
-// Make a function that will call the cocktail API using the user's input
-// Event listener on the search button
-
 function getCocktail(cocktailName) {
   // ajax call to get the cocktail data from the users input
   $.ajax({
@@ -25,14 +21,34 @@ function getCocktail(cocktailName) {
     error: function ajaxError(errorData) {
       // If the call errors the following will be executed
       console.error('Error: ', errorData.responseText);
-      
+
       $("#errorModal").modal('show');
+      getRandom();
+
     }
   });
 };
 
+//Function to select a random cocktail from a popular list of cocktails
+function getRandom() {
+  var randomCocktail = popularCocktails[Math.floor(Math.random()*popularCocktails.length)];
+
+  $("#randomCocktail").append(`<a href="#" id="randomCocktailLink">${randomCocktail}</a>`);
+
+  $("#randomCocktailLink").on('click', function (event) {
+    event.preventDefault();
+    var cocktailName = randomCocktail;
+
+    localStorage.setItem("nameOfCocktail", cocktailName);
+
+    // Calls the above function using the users input
+    getCocktail(cocktailName);
+  });
+};
+
+
 // Event listener for when the user clicks on the search button
-$("#search-btn").on('click',function(event){
+$("#search-btn").on('click', function (event) {
   event.preventDefault();
   // Gets the users input
   var cocktailName = $("#search-input").val().trim();
@@ -48,7 +64,17 @@ $("#search-btn").on('click',function(event){
 // Added a keyup event listener so the user can enter a cocktail and press enter on the keyboard instead of clicking the button
 $("#search-input").on("keyup", function (event) {
   if (event.keyCode === 13) {
-      event.preventDefault();
-      $("#search-btn").click();
+    event.preventDefault();
+    $("#search-btn").click();
   };
 });
+
+// Clears the html and local storage when the user clicks try again as it appended multiple suggestions
+$("#tryAgain").on('click', function () {
+  $("#randomCocktail").html("");
+});
+
+// TODO - Add momentJS? 
+//var currentTime = moment().hours();
+//var interval = setInterval(updateTime, 1000);
+

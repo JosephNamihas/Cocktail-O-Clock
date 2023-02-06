@@ -157,8 +157,14 @@ body {
   margin-top: 10px;
 }
 
-.modal .randomCocktail {
+#randomCocktailLink {
   text-decoration: none;
+  color: var(--gold);
+  font-weight: bold;
+}
+
+#randomCocktailLink:hover {
+  filter: brightness(1.50);
 }
 
 /* Footer styling*/

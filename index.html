@@ -61,18 +61,24 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p id="errorText">Please enter your desired cocktail name or ingredient. 
-          <br>It's cocktail o' clock somewhere!</p>
+          <p id="errorText">Please enter your desired cocktail name or ingredient.
+            <br>It's cocktail o' clock somewhere!
+          </p>
           <!-- GIF in here to reinforce error message -->
           <img src="assets/images/Facepalm.gif" class="modal-image">
           <!-- Link to a cocktail suggestion -->
+
           <h4 class="modal-link">Why not try a <a href="cocktail.html" class="randomCocktail">'cocktail-name'</a> instead?</h4>
            </div>
             <!-- TODO is there a way to randomly generate a cocktail name and link to go in this part of the modal? -->
             <!-- Cocktail DB provides an endpoint for this -->
+
+          <h4 class="modal-link">Why not try a <span id="randomCocktail"></span> instead?</h4>
+        </div>
+
         <div class="modal-footer">
           <!-- Button to take user back to search field -->
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Try again!</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="tryAgain">Try again!</button>
         </div>
       </div>
     </div>
@@ -82,17 +88,17 @@
   <footer>
     <div class="footer">
       <a href="https://api-ninjas.com/api/cocktail" class="footer-link" target="_blank">
-       <img src="assets/images/api1.png" alt="API Icon fo APINinjs">
+        <img src="assets/images/api1.png" alt="API Icon fo APINinjs">
       </a>
       <a href="https://github.com/JosephNamihas/Cocktail-O-Clock" class="footer-link" target="_blank">
         <img src="assets/images/github1.png" alt="GitHub Icon">
-       </a>
-       <a href="https://developers.giphy.com/docs/api" class="footer-link" target="_blank">
+      </a>
+      <a href="https://developers.giphy.com/docs/api" class="footer-link" target="_blank">
         <img src="assets/images/giphy.png" alt="Giphy Icon">
-       </a>
-       <a href="https://www.thecocktaildb.com/api.php" class="footer-link" target="_blank">
+      </a>
+      <a href="https://www.thecocktaildb.com/api.php" class="footer-link" target="_blank">
         <img src="assets/images/cocktaildb.png" alt="CocktailDB Icon">
-       </a>
+      </a>
     </div>
   </footer>
 
@@ -101,6 +107,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/popularCocktails.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 
