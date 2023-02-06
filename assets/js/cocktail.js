@@ -2,6 +2,12 @@
 var cocktailDataObject = JSON.parse(localStorage.getItem("data"));
 var cocktailImageSearch = localStorage.getItem("nameOfCocktail");
 
+// Validation for non-existant cocktail 
+if (cocktailDataObject.length === 0) {
+    window.location = './index.html';
+    // Display Modal
+}
+
 // Using the cocktail name to do the gif search
 var giphySearchTerm = cocktailDataObject[0].name;
 
