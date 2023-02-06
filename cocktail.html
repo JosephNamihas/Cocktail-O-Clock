@@ -52,9 +52,11 @@
         </div>
       </div>
 
-      <div class="cocktail-method col-lg-6 col-md-6 col-sm-12 custom-col">
+      <div class="cocktail-method col-lg-6 col-md-6 col-sm-12 custom-col" id="recipe">
         <!--Name of cocktail appends here-->
-        <h4>Cocktail ingredients</h4>
+        <h4>Cocktail ingredients 
+          <img src="assets/images/copy.png" alt="copy-icon" onclick="copyRecipe(recipe)" class="copy-icon">
+        </h4>
         <ol id="ingredients">
           <!-- Ingredients array item append here-->
         </ol>
@@ -89,7 +91,6 @@
   <!--end of section-3-->
 
   <!--footer-->
-
   <!-- Button to go back to search page -->
   <footer>
     <button class="btn custom-btn" id="back-to-search" onclick="history.back()">
