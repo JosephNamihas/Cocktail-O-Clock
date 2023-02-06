@@ -6,6 +6,8 @@ function getCocktail(cocktailName) {
     headers: { 'X-Api-Key': 'oG7S2vqNUXRwDPUivFn60w==v3SxU4nBy9O504CG' },
     contentType: 'application/json',
     success: function (cocktailData) {
+
+
       // If the call is succesful the following will be executed
       console.log(cocktailData);
 
@@ -45,7 +47,6 @@ function getRandom() {
 };
 
 
-
 // Event listener for when the user clicks on the search button
 $("#search-btn").on('click', function (event) {
   event.preventDefault();
@@ -73,7 +74,7 @@ $("#tryAgain").on('click', function () {
   $("#randomCocktail").html("");
 });
 
-
 // TODO - Add momentJS? 
 //var currentTime = moment().hours();
 //var interval = setInterval(updateTime, 1000);
+
