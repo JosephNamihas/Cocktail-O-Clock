@@ -19,5 +19,11 @@ var popularCocktails = [
     "Caipirinha",
     "Long Island Iced Tea",
     "Sidecar",
-    "Porto Flip",
+    "Sazerac",
+    "Paloma",
+    "Moscow Mule",
+    "Martinez",
+    "Pisco Sour",
+    "Mint Julep",
+    "Bloody Mary",
 ];
