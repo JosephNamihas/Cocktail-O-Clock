@@ -1,4 +1,4 @@
-# Cocktail-O-Clock
+# Cocktail-O-Clock <img src="assets/images/cocktail.png">
 
 ## Description
 Cocktail-O-Clock is an dynamic interactive front-end application that seeks to inform the user about the cocktail of their choice, whilst adding a fun, entertaining element in the form a GIF.
@@ -58,6 +58,9 @@ Screenshot of the Index HTML page:
 
 Screenshot of the Cocktail HTML which displays the user's search results:
 ![Cocktail HTML](/assets/images/CocktailHTML.png)
+
+## The following GIF shows the web application's appearance and functionality:
+![Cocktail O'Clock GIF](assets/images/Cocktail-O'Clock.gif)
 
 ## Installation (Link to Pages and how to use app)
 
