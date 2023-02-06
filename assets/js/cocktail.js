@@ -73,9 +73,7 @@ function retrieveGifImage() {
                 getRelatedCocktail(cocktailName);
             });
 
-            // Gets the favourites from local storage
 
-            //$("#favourite-cocktails").append("<li>" + cocktailDataObject[0].name + "</li>");
         }
 
     });
@@ -107,30 +105,29 @@ function getRelatedCocktail(cocktailName) {
 
 function loadStorage() {
     console.log("Loading");
+        // Fetches value from favourite-cocktail localStorage and parses
+        localStorage.getItem(("Favourite-Cocktail", JSON.parse(storageArray)));
+        console.log(storageArray);
 
-            localStorage.getItem(("Favourite-Cocktail", JSON.parse(storageArray)));
-            console.log(storageArray);
-
-            for(let i = 0; i < storageArray.length; i++) {
-                $("#favourite-cocktails").append("<li>" + storageArray[i] + "</li>");
-            } 
+        // On page load, cycles through loop and appends everything in local storage...
+        for(let i = 0; i < storageArray.length; i++) {
+             $("#favourite-cocktails").append("<li>" + storageArray[i] + "</li>");
+        } 
         }
 
 $(document).ready(function () {
 
     retrieveCocktailImage();
     retrieveGifImage();
-    loadStorage(); // Loads faviroutes on refresh*/
+    loadStorage(); // Loads favourites on refresh in the ready function
 });
 
 $("#add-to-favourites").on('click', function () {
-    // Saves to favourites / local Storage
-    console.log("Clicked");
-    console.log(cocktailDataObject[0].name);
+    // Pushes current cocktail to empty array (storageArray)
     storageArray.push(cocktailDataObject[0].name);
-    console.log(storageArray);
-    //localStorage.setItem("favourite-cocktail", cocktailDataObject[0].name); // May need to store in object / array otherwise key gets overwritten
+    //Sets index of storage array to memory
     localStorage.setItem("Favourite-Cocktail", JSON.stringify(storageArray));
+    //Appends to page
     $("#favourite-cocktails").append("<li>" + cocktailDataObject[0].name + "</li>");
 
 });
