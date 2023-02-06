@@ -72,6 +72,7 @@ body {
 
 .social-icons img:hover {
     filter: brightness(1.50);
+    transform: scale(1.2);
 }
 
 .social-link {
@@ -196,7 +197,7 @@ footer {
     justify-content: center;
     background-color: var(--plum);
     color: grey;
-    height: 20vh;
+    height: 12vh;
     border-top: 3px solid var(--gold);
 }
 
