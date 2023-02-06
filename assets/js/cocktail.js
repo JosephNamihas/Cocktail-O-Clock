@@ -1,7 +1,7 @@
 // Getting the cocktail data from local storage and storing into a new variable
 var cocktailDataObject = JSON.parse(localStorage.getItem("data"));
 var cocktailImageSearch = localStorage.getItem("nameOfCocktail");
-var storageArray = []; // Used to store favourites
+var storageArray = JSON.parse(localStorage.getItem("Favourite-Cocktail")) || []; // Used to store favourites
 
 // Using the cocktail name to do the gif search
 var giphySearchTerm = cocktailDataObject[0].name;
@@ -106,7 +106,7 @@ function getRelatedCocktail(cocktailName) {
 function loadStorage() {
     console.log("Loading");
         // Fetches value from favourite-cocktail localStorage and parses
-        localStorage.getItem(("Favourite-Cocktail", JSON.parse(storageArray)));
+        localStorage.getItem("Favourite-Cocktail", JSON.parse(localStorage.getItem("Favourite-Cocktail")));
         console.log(storageArray);
 
         // On page load, cycles through loop and appends everything in local storage...
