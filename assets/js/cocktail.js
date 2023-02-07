@@ -1,7 +1,8 @@
 // Getting the cocktail data from local storage and storing into a new variable
 var cocktailDataObject = JSON.parse(localStorage.getItem("data"));
 var cocktailImageSearch = localStorage.getItem("nameOfCocktail");
-var storageArray = JSON.parse(localStorage.getItem("Favourite-Cocktail")) || []; // Used to store favourites
+var storageArray = [];
+//var storageArray = JSON.parse(localStorage.getItem("Favourite-Cocktail")) || []; // Used to store favourites
 
 // Using the cocktail name to do the gif search
 var giphySearchTerm = cocktailDataObject[0].name;
