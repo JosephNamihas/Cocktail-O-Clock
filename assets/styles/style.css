@@ -22,37 +22,6 @@ body {
   overflow: hidden;
 }
 
-/* Nav styling */
-
-.navbar {
-  height: 90px;
-  align-items: flex-end;
-  justify-content: flex-end;
-  display: flex;
-  width: cover;
-  background-color: var(--plum);
-  border-bottom: 4px solid var(--gold);
-}
-
-.navbar {
-  background-image: linear-gradient(to right, #8b6512, #46042a)
-}
-
-.navbar img:hover{
-  filter: brightness(1.50);
-}
-
-.navbar-link {
-  filter: brightness(0.7);
-}
-
-.navbar-link img {
-  width: 100%;
-  padding: 0 0.5rem;
-}
-
-/*end of footer*/
-
 /* Styles for the large jumbotron on homepage */
 .custom-jumbotron {
   display: flex;
@@ -174,7 +143,7 @@ body {
 
 .copyright {
   font-size: 0.8rem;
-  color: #fff;
+  color: #969494;
   background-color: var(--plum);
   text-align: center;
   height: 5vh;
@@ -202,6 +171,7 @@ body {
 .footer-link img {
   width: 100%;
   padding: 0 0.5rem;
+
 }
 /*end of footer*/
 

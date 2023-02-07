@@ -56,27 +56,26 @@ function retrieveGifImage() {
         //Populates the Instructions
         $("#method").text(cocktailDataObject[0].instructions);
 
-        // TODO - Only lists text. Need to make them links ideally? 
-        // TODO - Work in progress!
+        // RELATED COCKTAILS 
+        var relatedCocktailsArr = [];
 
-        //Populates 5 related list items
+        // Populates 5 related list items
         for (let i = 1; i < 6; i++) {
-
             $("#related-cocktails").append(`<li><a href="./cocktail.html" class="relatedCocktailLink">${cocktailDataObject[i].name}</a></li>`);
-
+            relatedCocktailsArr.push(cocktailDataObject[i].name);
+        }
+        
+        relatedCocktailsArr.forEach(function(relatedCocktail) {
             $(".relatedCocktailLink").on('click', function (event) {
                 event.preventDefault();
-                var cocktailName = cocktailDataObject[i].name;
-
-                localStorage.setItem("nameOfCocktail", cocktailName);
+                
+                var cocktailName = relatedCocktail;
 
                 // Calls the below function using the users input
                 getRelatedCocktail(cocktailName);
             });
-
-
-        }
-
+         });
+        // END OF RELATED COCKTAILS
     });
 };
 
@@ -99,22 +98,31 @@ function getRelatedCocktail(cocktailName) {
         error: function ajaxError(errorData) {
             // If the call errors the following will be executed
             console.error('Error: ', errorData.responseText);
-
         }
     });
 };
 
 function loadStorage() {
     console.log("Loading");
+
         // Fetches value from favourite-cocktail localStorage and parses
         localStorage.getItem("Favourite-Cocktail", JSON.parse(localStorage.getItem("Favourite-Cocktail")));
         console.log(storageArray);
 
-        // On page load, cycles through loop and appends everything in local storage...
-        for(let i = 0; i < storageArray.length; i++) {
-             $("#favourite-cocktails").append("<li>" + storageArray[i] + "</li>");
-        } 
-        }
+    // Fetches value from favourite-cocktail localStorage and parses
+    //localStorage.getItem(("Favourite-Cocktail", JSON.parse(storageArray)));
+    console.log(storageArray);
+
+    // On page load, cycles through loop and appends everything in local storage...
+    for (let i = 0; i < storageArray.length; i++) {
+        $("#favourite-cocktails").append("<li>" + storageArray[i] + "</li>");
+    }
+}
+
+function backToSearch() {
+    history.back();
+    localStorage.clear();
+}
 
 $(document).ready(function () {
 
@@ -123,25 +131,33 @@ $(document).ready(function () {
     loadStorage(); // Loads favourites on refresh in the ready function
 
 
+    // Hiding the related cocktails field if there are only 2 in the array
+    if (cocktailDataObject.length <= 2) {
+        $(".related").addClass("hide");
+        $(".favourites").addClass("text-center")
+    }
+
 });
 
 // Making function for the copy icon to copy recipe
 function copyRecipe() {
     var textCopy = document.getElementById("recipe").innerText;
     var textElem = document.createElement("textarea");
-      document.body.appendChild(textElem);
-      textElem.value = textCopy;
-      textElem.select();
+    document.body.appendChild(textElem);
+    textElem.value = textCopy;
+    textElem.select();
 
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(textCopy).then(() => {
-        //alert("Copied!"); // for checking if it works? /
-        //!make a modal???("Copied!");
-      })
+        navigator.clipboard.writeText(textCopy).then(() => {
+            //alert("Copied!"); // for checking if it works? /
+            //!make a modal???("Copied!");
+        })
     } else {
-      console.log("Browser not compatible") // for checking if errors
+        console.log("Browser not compatible") // for checking if errors
     }
-} 
+}
+
+
 
 $("#add-to-favourites").on('click', function () {
     // Pushes current cocktail to empty array (storageArray)
