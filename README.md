@@ -39,7 +39,7 @@ GIPHY was used for the cocktail GIF
 
 Good planning and communication within the team. 
 
-![Trello Utilization](/assets/images/readme-images/trello-screenshot.PNG)
+![Trello Utilization](assets/images/readme-images/Trello-screenshot.png)
 
 Our wire frame
 
