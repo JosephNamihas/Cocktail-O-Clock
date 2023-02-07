@@ -1,7 +1,8 @@
 // Getting the cocktail data from local storage and storing into a new variable
 var cocktailDataObject = JSON.parse(localStorage.getItem("data"));
 var cocktailImageSearch = localStorage.getItem("nameOfCocktail");
-var storageArray = []; // Used to store favourites
+var storageArray = [];
+//var storageArray = JSON.parse(localStorage.getItem("Favourite-Cocktail")) || []; // Used to store favourites
 
 // Using the cocktail name to do the gif search
 var giphySearchTerm = cocktailDataObject[0].name;
@@ -103,6 +104,11 @@ function getRelatedCocktail(cocktailName) {
 
 function loadStorage() {
     console.log("Loading");
+
+        // Fetches value from favourite-cocktail localStorage and parses
+        localStorage.getItem("Favourite-Cocktail", JSON.parse(localStorage.getItem("Favourite-Cocktail")));
+        console.log(storageArray);
+
     // Fetches value from favourite-cocktail localStorage and parses
     //localStorage.getItem(("Favourite-Cocktail", JSON.parse(storageArray)));
     console.log(storageArray);
@@ -122,6 +128,8 @@ $(document).ready(function () {
 
     retrieveCocktailImage();
     retrieveGifImage();
+    loadStorage(); // Loads favourites on refresh in the ready function
+
 
     // Hiding the related cocktails field if there are only 2 in the array
     if (cocktailDataObject.length <= 2) {
@@ -129,7 +137,6 @@ $(document).ready(function () {
         $(".favourites").addClass("text-center")
     }
 
-    loadStorage(); // Loads favourites on refresh in the ready function
 });
 
 // Making function for the copy icon to copy recipe
@@ -150,7 +157,6 @@ function copyRecipe() {
     }
 }
 
-loadStorage(); // Loads faviroutes on refresh*/
 
 
 $("#add-to-favourites").on('click', function () {
