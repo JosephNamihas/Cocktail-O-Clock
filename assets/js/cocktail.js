@@ -68,6 +68,7 @@ function retrieveGifImage() {
 
             var cocktailName = $(this).text()
 
+            localStorage.setItem("nameOfCocktail", cocktailName);
             console.log(cocktailName)
 
             getCocktail(cocktailName)
