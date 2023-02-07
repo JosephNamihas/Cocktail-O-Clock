@@ -178,16 +178,22 @@ body {
 /* Media Queries */
 @media only screen and (max-width: 767px) {
   .custom-btn {
-    width: 25%;
+    width: 35%;
     margin-top: 20px;
   }
 }
 
 @media only screen and (max-width: 481px) {
+  .modal-dialog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
   .modal-content {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 95%;
   }
   }
