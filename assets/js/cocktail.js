@@ -33,6 +33,8 @@ function retrieveGifImage() {
         method: "GET"
     }).then(function (response) {
 
+        // Console log to test
+        console.log('This works')
         // Random number generator to randomly select GIF
         var randomGIF = Math.floor(Math.random() * response.data.length);
 
@@ -79,8 +81,19 @@ function loadStorage() {
     if (storageArray !== null) { // If the storage array has a value it will fetch it and display it
         // On page load, cycles through loop and appends everything in local storage...
         for (let i = 0; i < storageArray.length; i++) {
-            $("#favourite-cocktails").append(`<li>${storageArray[i]}</li>`);
+            $("#favourite-cocktails").append(`<li><a href="#" class="fav-items">${storageArray[i]}</a></li>`);
         };
+        // When we click, it stores the cocktail name and uses this to get new images and cocktail data
+        $(".fav-items").on('click', function (event) {
+            event.preventDefault();
+
+            var cocktailName = $(this).text()
+
+            localStorage.setItem("nameOfCocktail", cocktailName);
+            console.log(cocktailName)
+
+            getCocktail(cocktailName)
+        })
     };
 };
 
