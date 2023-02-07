@@ -36,7 +36,7 @@ function retrieveGifImage() {
         // Console log to test
         console.log('This works')
         // Random number generator to randomly select GIF
-        var randomGIF = Math.floor(Math.random() * response.data.length);
+        var randomGIF = Math.floor(Math.random() * 15); // Limits to the array to the first 15 searches
 
         // Populates the Cocktail Name on the cocktail page
         var cocktailNameEl = cocktailDataObject[0].name
