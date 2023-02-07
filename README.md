@@ -39,15 +39,18 @@ GIPHY was used for the cocktail GIF
 
 Good planning and communication within the team. 
 
-![Trello Utilization](/assets/images/readme-images/trello-board.PNG)
+![Trello Utilization](/assets/images/readme-images/trello-screenshot.PNG)
 
+Our wire frame
+
+![Cocktail O'Clock GIF](assets/images/readme-images/wireframe.gif)
 ## Input from each team member
 
 Rochelle -
 
 Nikki -
 
-Suzi - 
+Suzie - ``` "I would like to thank everyone in my team. We communicated well and always supported each other. Every single one of us had a good contribution in the project. 🥰 It was a pleasure working with you all."```
 
 Joe -
     ``` "I felt our approach to the project was spot on! We started with a good design, which gave us a great base to work from. I originally built the skeleton of the cocktail page from the initital design. It allowed us to style and add javaScript functionality quite early on. Once a lot of the functionality was in place, the design was changed slightly to accomodate new features and design ideas.
@@ -56,10 +59,14 @@ Joe -
 ## Usage (Screenshots / Video)
 
 Screenshot of the Index HTML page:
-![Index HTML](/assets/images/IndexHTML.png)
+
+![Index HTML](/assets/images/readme-images/index-page.png)
 
 Screenshot of the Cocktail HTML which displays the user's search results:
-![Cocktail HTML](/assets/images/CocktailHTML.png)
+
+
+![Cocktail HTML](/assets/images/readme-images/cocktail-page.png)
+
 
 ## The following GIF shows the web application's appearance and functionality:
 ![Cocktail O'Clock GIF](assets/images/Cocktail-O'Clock.gif)
@@ -86,7 +93,6 @@ If we had more time, we would implent the following:
 - We would implement MomentJS and base functions around it. 
 - Share cocktail page on social media
 - Change the copy function to include the name of the cocktail
-- 
 
 ## Credits
 
