@@ -49,7 +49,9 @@ Nikki -
 
 Suzi - 
 
-Joe - 
+Joe -
+    ``` "I felt our approach to the project was spot on! We started with a good design, which gave us a great base to work from. I originally built the skeleton of the cocktail page from the initital design. It allowed us to style and add javaScript functionality quite early on. Once a lot of the functionality was in place, the design was changed slightly to accomodate new features and design ideas.
+    What I would like to improve on in the future is my commit tendancies. At the start of the project it was ok due to each team member having more specific roles in different areas of the project. However, towards the end of the project when we were all working on similiar items, we came accross more merge conflicts."```
 
 ## Usage (Screenshots / Video)
 
@@ -62,9 +64,30 @@ Screenshot of the Cocktail HTML which displays the user's search results:
 ## The following GIF shows the web application's appearance and functionality:
 ![Cocktail O'Clock GIF](assets/images/Cocktail-O'Clock.gif)
 
-## Installation (Link to Pages and how to use app)
+## Installation (Link to gitHub pages and how to use app)
+
+1. Click the link to the GitHub Pages site where the app is hosted
+2. Once on the homepage, search for your cocktail of choice (E.G Martini, Negroni)
+3. The cocktail page will appear and will show you the following: 
+    - The cocktail name
+    - The ingredients
+    - The method to produce
+    - An image and a GIF related to the cocktail
+
+4. You will be given a choice of related cocktails. Clicking on them, will take you to the cocktail.
+5. You'll have the option to save a cocktail to favourites. The favourite cocktail will be saven in local storage once clicked
+
+Link to GitHub Pages: https://josephnamihas.github.io/Cocktail-O-Clock/
 
 ## Credits
+
+https://www.w3schools.com/
+https://developer.mozilla.org/en-US/
+
+sorada.wright@gmail.com / https://github.com/SoradaW
+rochellembradley@gmail.com / https://github.com/rbrd87
+nicola162@gmail.com - https://github.com/Nikki1162
+joenamihas@yahoo.co.uk - https://github.com/JosephNamihas 
 
 ## License
 
