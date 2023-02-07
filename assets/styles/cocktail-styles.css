@@ -135,8 +135,8 @@ ol li {
 }
 
 .cocktail-gif img {
-    width: auto;
-    height: 200px;
+    max-width: 300px;
+    height: auto;
     object-fit: cover;
     overflow: hidden;
     background-color: var(--plum);
