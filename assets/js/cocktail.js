@@ -1,10 +1,10 @@
 // Getting the cocktail data from local storage and storing into a new variable
 var cocktailDataObject = JSON.parse(localStorage.getItem("data"));
 var cocktailImageSearch = localStorage.getItem("nameOfCocktail");
-var storageArray = []; // Used to store favourites
+var storageArray = JSON.parse(localStorage.getItem("Favourites")) || []; // Used to store favourites
 
 // Using the cocktail name to do the gif search
-var giphySearchTerm = cocktailDataObject[0].name;
+var giphySearchTerm = cocktailImageSearch;
 
 function retrieveCocktailImage() {
     // 3rd API for generating cocktail image
@@ -33,8 +33,10 @@ function retrieveGifImage() {
         method: "GET"
     }).then(function (response) {
 
+        // Console log to test
+        console.log('This works')
         // Random number generator to randomly select GIF
-        var randomGIF = Math.floor(Math.random() * response.data.length);
+        var randomGIF = Math.floor(Math.random() * 15); // Limits to the array to the first 15 searches
 
         // Populates the Cocktail Name on the cocktail page
         var cocktailNameEl = cocktailDataObject[0].name
@@ -55,114 +57,98 @@ function retrieveGifImage() {
         //Populates the Instructions
         $("#method").text(cocktailDataObject[0].instructions);
 
-        // TODO - Only lists text. Need to make them links ideally? 
-        // TODO - Work in progress!
-
-        //Populates 5 related list items
+        // Populates 5 related list items
         for (let i = 1; i < 6; i++) {
+            $("#related-cocktails").append(`<li><a href="#" class="related-items">${cocktailDataObject[i].name}</a></li>`);
+        };
 
-            $("#related-cocktails").append(`<li><a href="./cocktail.html" class="relatedCocktailLink">${cocktailDataObject[i].name}</a></li>`);
+        // When clicking the list items, the text is stored and the getCocktail function is called again.
+        $(".related-items").on('click', function (event) {
+            event.preventDefault();
 
-            $(".relatedCocktailLink").on('click', function (event) {
-                event.preventDefault();
-                var cocktailName = cocktailDataObject[i].name;
+            var cocktailName = $(this).text()
 
-                localStorage.setItem("nameOfCocktail", cocktailName);
+            localStorage.setItem("nameOfCocktail", cocktailName);
+            console.log(cocktailName)
 
-                // Calls the below function using the users input
-                getRelatedCocktail(cocktailName);
-            });
-
-
-        }
-
-    });
-};
-
-function getRelatedCocktail(cocktailName) {
-    // ajax call to get the cocktail data from the users input
-    $.ajax({
-        method: 'GET',
-        url: 'https://api.api-ninjas.com/v1/cocktail?name=' + cocktailName,
-        headers: { 'X-Api-Key': 'oG7S2vqNUXRwDPUivFn60w==v3SxU4nBy9O504CG' },
-        contentType: 'application/json',
-        success: function (cocktailData) {
-            // If the call is succesful the following will be executed
-            console.log(cocktailData);
-
-            // Stored the cocktailData object into local storage
-            localStorage.setItem("data", JSON.stringify(cocktailData));
-
-            window.location = './cocktail.html';
-        },
-        error: function ajaxError(errorData) {
-            // If the call errors the following will be executed
-            console.error('Error: ', errorData.responseText);
-
-        }
+            getCocktail(cocktailName)
+        })
     });
 };
 
 function loadStorage() {
-    console.log("Loading");
-        // Fetches value from favourite-cocktail localStorage and parses
-        localStorage.getItem(("Favourite-Cocktail", JSON.parse(storageArray)));
-        console.log(storageArray);
-
+    console.log(storageArray)
+    // If statement so that if the storage array is null it will not attempt to load the storage
+    if (storageArray !== null) { // If the storage array has a value it will fetch it and display it
         // On page load, cycles through loop and appends everything in local storage...
-        for(let i = 0; i < storageArray.length; i++) {
-             $("#favourite-cocktails").append("<li>" + storageArray[i] + "</li>");
-        } 
-        }
+        for (let i = 0; i < storageArray.length; i++) {
+            $("#favourite-cocktails").append(`<li><a href="#" class="fav-items">${storageArray[i]}</a></li>`);
+        };
+        // When we click, it stores the cocktail name and uses this to get new images and cocktail data
+        $(".fav-items").on('click', function (event) {
+            event.preventDefault();
+
+            var cocktailName = $(this).text()
+
+            localStorage.setItem("nameOfCocktail", cocktailName);
+            console.log(cocktailName)
+
+            getCocktail(cocktailName)
+        })
+    };
+};
+
+function backToSearch() {
+    window.location = './index.html';
+}
 
 $(document).ready(function () {
 
     retrieveCocktailImage();
     retrieveGifImage();
-
     loadStorage(); // Loads favourites on refresh in the ready function
 
-
+    // Hiding the related cocktails field if there are only 2 in the array
+    if (cocktailDataObject.length <= 2) {
+        $(".related").addClass("hide");
+        $(".favourites").addClass("text-center")
+    }
 });
 
 // Making function for the copy icon to copy recipe
 function copyRecipe() {
     var textCopy = document.getElementById("recipe").innerText;
     var textElem = document.createElement("textarea");
-      document.body.appendChild(textElem);
-      textElem.value = textCopy;
-      textElem.select();
+    document.body.appendChild(textElem);
+    textElem.value = textCopy;
+    textElem.select();
 
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(textCopy).then(() => {
-        //alert("Copied!"); // for checking if it works? /
-        //!make a modal???("Copied!");
-      })
+        navigator.clipboard.writeText(textCopy).then(() => {
+            //alert("Copied!"); // for checking if it works? /
+            //!make a modal???("Copied!");
+        })
     } else {
-      console.log("Browser not compatible") // for checking if errors
+        console.log("Browser not compatible") // for checking if errors
     }
-} 
-
-    loadStorage(); // Loads faviroutes on refresh*/
-
+}
 
 $("#add-to-favourites").on('click', function () {
-    // Pushes current cocktail to empty array (storageArray)
-    storageArray.push(cocktailDataObject[0].name);
-    //Sets index of storage array to memory
-    localStorage.setItem("Favourite-Cocktail", JSON.stringify(storageArray));
-    //Appends to page
-    $("#favourite-cocktails").append("<li>" + cocktailDataObject[0].name + "</li>");
-
+    // Validation to stop the user adding multiples of the same cocktail
+    if (!storageArray.includes(cocktailDataObject[0].name)) {
+        // Pushes current cocktail to empty array (storageArray)
+        storageArray.push(cocktailDataObject[0].name);
+        //Sets index of storage array to memory
+        localStorage.setItem("Favourites", JSON.stringify(storageArray));
+        //Appends to page
+        $("#favourite-cocktails").append(`<li>${cocktailDataObject[0].name}</li>`)
+    } else {
+        console.log("You already have this saved")
+    }
 });
 
-/*function loadStorage() {
-
-        localStorage.getItem(("Favourite-Cocktail", JSON.parse(storageArray)));
-            console.log(storageArray);
-
-            for(let i = 0; i < storageArray.length; i++) {
-                $("#favourite-cocktails").append("<li>" + storageArray[i] + "</li>");
-            } 
-}*/
-
+// Button to clear all favourites
+$("#delete-favourites").on('click', function () {
+    localStorage.removeItem("Favourites")
+    location.reload();
+});

@@ -33,7 +33,7 @@
       <div class="col-lg-3 col-md-3 col-sm-12 custom-col">
         <div class="cocktail-image">
           <!--Placeholder img - Cocktail img appends into here-->
-          <img id="cocktailImg" src="https://via.placeholder.com/300" alt="Your cocktail of choice">
+          <img id="cocktailImg" src="assets/images/200804-2121x1414-cocktails.jpg" alt="Your cocktail of choice">
         </div>
         <br>
         <div class="social-icons">
@@ -93,7 +93,7 @@
   <!--footer-->
   <!-- Button to go back to search page -->
   <footer>
-    <button class="btn custom-btn" id="back-to-search" onclick="history.back()">
+    <button class="btn custom-btn" id="back-to-search" onclick="backToSearch()">
       <h6>Back to Search</h6>
       <i class="fas fa-undo"></i>
     </button>
@@ -103,6 +103,12 @@
       <h6>Add to Favourites</h6>
       <i class="fa-solid fa-heart"></i>
     </button>
+
+    <!-- Button to clear favourites -->
+    <button class="btn custom-btn" id="delete-favourites">
+      <h6>Clear Favourites</h6>
+      <i class="fa fa-times"></i>
+    </button>
   </footer>
   <!--end of footer-->
 
@@ -111,7 +117,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/cocktail.js"></script>
-
 </body>
 
 

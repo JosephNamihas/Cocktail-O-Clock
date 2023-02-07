@@ -64,11 +64,12 @@ Screenshot of the Index HTML page:
 
 Screenshot of the Cocktail HTML which displays the user's search results:
 
+
 ![Cocktail HTML](/assets/images/readme-images/cocktail-page.png)
 
 
 ## The following GIF shows the web application's appearance and functionality:
-![Cocktail O'Clock GIF](assets/images/readme-images/cocktail-Oclock-GIF.gif)
+![Cocktail O'Clock GIF](assets/images/Cocktail-O'Clock.gif)
 
 ## Installation (Link to gitHub pages and how to use app)
 
@@ -85,15 +86,23 @@ Screenshot of the Cocktail HTML which displays the user's search results:
 
 Link to GitHub Pages: https://josephnamihas.github.io/Cocktail-O-Clock/
 
+## Future Development Plans
+
+If we had more time, we would implent the following:
+
+- We would implement MomentJS and base functions around it. 
+- Share cocktail page on social media
+- Change the copy function to include the name of the cocktail
+
 ## Credits
 
 https://www.w3schools.com/
 https://developer.mozilla.org/en-US/
 
-sorada.wright@gmail.com / https://github.com/SoradaW
-rochellembradley@gmail.com / https://github.com/rbrd87
-nicola162@gmail.com - https://github.com/Nikki1162
-joenamihas@yahoo.co.uk - https://github.com/JosephNamihas 
+- sorada.wright@gmail.com / https://github.com/SoradaW
+- rochellembradley@gmail.com / https://github.com/rbrd87
+- nicola162@gmail.com - https://github.com/Nikki1162
+- joenamihas@yahoo.co.uk - https://github.com/JosephNamihas 
 
 ## License
 

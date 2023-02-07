@@ -72,6 +72,7 @@ body {
 
 .social-icons img:hover {
     filter: brightness(1.50);
+    transform: scale(1.2);
 }
 
 .social-link {
@@ -134,8 +135,8 @@ ol li {
 }
 
 .cocktail-gif img {
-    width: auto;
-    height: 200px;
+    max-width: 300px;
+    height: auto;
     object-fit: cover;
     overflow: hidden;
     background-color: var(--plum);
@@ -161,11 +162,19 @@ ol li {
     color: var(--gold);
     position: relative;
     padding: 30px;
+    text-transform: capitalize;
+}
+
+.related {
+    border-right: 1px solid var(--gold);
 }
 
 .favourites {
     text-align: left;
-    border-left: 1px solid var(--gold);
+}
+
+.hide {
+    display: none;
 }
 
 ul {
@@ -196,14 +205,13 @@ footer {
     justify-content: center;
     background-color: var(--plum);
     color: grey;
-    height: 20vh;
+    height: 12vh;
     border-top: 3px solid var(--gold);
 }
 
 
 /* ---- Button Styling -----*/
 
-button i,
 button h6 {
     background-color: var(--gold);
 }
@@ -223,6 +231,18 @@ button h6 {
 
 .custom-btn:focus {
     box-shadow: 0 0 5px 5px rgba(167, 99, 4, 0.486);
+}
+
+.delete-btn {
+    font-size: 20px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    color: var(--gold);
+}
+
+.delete-btn:hover {
+    filter: brightness(1.80);
 }
 
 /* Media Queries */
