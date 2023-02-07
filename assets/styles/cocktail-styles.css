@@ -162,11 +162,19 @@ ol li {
     color: var(--gold);
     position: relative;
     padding: 30px;
+    text-transform: capitalize;
+}
+
+.related {
+    border-right: 1px solid var(--gold);
 }
 
 .favourites {
     text-align: left;
-    border-left: 1px solid var(--gold);
+}
+
+.hide {
+    display: none;
 }
 
 ul {
@@ -225,6 +233,7 @@ button h6 {
 .custom-btn:focus {
     box-shadow: 0 0 5px 5px rgba(167, 99, 4, 0.486);
 }
+
 
 /* Media Queries */
 @media only screen and (max-width: 767px) {
