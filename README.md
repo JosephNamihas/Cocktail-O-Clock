@@ -69,7 +69,7 @@ Screenshot of the Cocktail HTML which displays the user's search results:
 
 
 ## The following GIF shows the web application's appearance and functionality:
-![Cocktail O'Clock GIF](assets/images/Cocktail-O'Clock.gif)
+![Cocktail O'Clock GIF](assets/images/readme-images/cocktail-Oclock-GIF.gif)
 
 ## Installation (Link to gitHub pages and how to use app)
 
