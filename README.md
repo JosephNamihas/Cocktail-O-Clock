@@ -49,7 +49,7 @@ Our wire frame
 Rochelle - ``` I really enjoyed working on our first team project. From the first wireframe to the last little touches with CSS and JS, everyone has contributed and supported eachother, we've all done parts of the project that perhaps we don't really enjoy. 
 I found that pair programming a difficult bit of code really helped as well, but also being able to have time away on your own to try and figure stuff out has been great too. Going forward it would be good to see how others handle working on a small project with so many members and how they deal with merge conflicts, a couple of times code was overwritten and had to be added back in. ```
 
-Nikki -
+Nikki - ``` "For a first group project, I can say that I've had such a positive experience overall, and have really enjoyed collaborating with my team. We set out a clear plan at the beginning of our project, and we have made a real point of working together through any challenges, but equally having time away from the group setting to work independently when needed. It was a real pleasure to work together, and I feel like I learned a lot from my teammates over the course of the week." ```
 
 Suzie - ``` "I would like to thank everyone in my team. We communicated well and always supported each other. Every single one of us had a good contribution in the project. 🥰 It was a pleasure working with you all."```
 
