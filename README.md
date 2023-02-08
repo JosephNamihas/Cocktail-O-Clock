@@ -39,14 +39,15 @@ GIPHY was used for the cocktail GIF
 
 Good planning and communication within the team. 
 
-![Trello Utilization](assets/images/readme-images/Trello-screenshot.png)
+![Trello Utilization](./assets/images/readme-images/Trello-screenshot.png)
 
 Our wire frame
 
-![Cocktail O'Clock GIF](assets/images/readme-images/wireframe.gif)
+![Cocktail O'Clock GIF](./assets/images/readme-images/wireframe.gif)
 ## Input from each team member
 
-Rochelle -
+Rochelle - ``` I really enjoyed working on our first team project. From the first wireframe to the last little touches with CSS and JS, everyone has contributed and supported eachother, we've all done parts of the project that perhaps we don't really enjoy. 
+I found that pair programming a difficult bit of code really helped as well, but also being able to have time away on your own to try and figure stuff out has been great too. Going forward it would be good to see how others handle working on a small project with so many members and how they deal with merge conflicts, a couple of times code was overwritten and had to be added back in. ```
 
 Nikki -
 
@@ -60,16 +61,16 @@ Joe -
 
 Screenshot of the Index HTML page:
 
-![Index HTML](/assets/images/readme-images/index-page.png)
+![Index HTML](./assets/images/readme-images/index-page.png)
 
 Screenshot of the Cocktail HTML which displays the user's search results:
 
 
-![Cocktail HTML](/assets/images/readme-images/cocktail-page.png)
+![Cocktail HTML](./assets/images/readme-images/cocktail-page.png)
 
 
 ## The following GIF shows the web application's appearance and functionality:
-![Cocktail O'Clock GIF](assets/images/readme-images/cocktail-Oclock-GIF.gif)
+![Cocktail O'Clock GIF](./assets/images/readme-images/cocktail-Oclock-GIF.gif)
 
 ## Installation (Link to gitHub pages and how to use app)
 
