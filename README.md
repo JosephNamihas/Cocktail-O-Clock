@@ -16,21 +16,20 @@ The application takes user input (their choice of cocktail) and returns a page w
 A list of related cocktails are provided on the side of the page, along with the option to add that specific cocktail to a 'Favourites' list.
 
 ## User Story
-
-USER STORY:
-AS A lover of cocktails
-I WANT a to be able to search for my favourite cocktails
-SO THAT I know the ingredients, quantities and methods for making the perfect drink
+ <br />AS A lover of cocktails
+ <br />I WANT a to be able to search for my favourite cocktails
+ <br />SO THAT I know the ingredients, quantities and methods for making the perfect drink
 
 ACCEPTANCE CRITERIA:
-Accept user input to search cocktail database
-Show an image of the cocktail where possible
-Show the ingredients for the cocktail
-Show the quantities per ingredient
-Show the method to make the cocktail
-Allow the user to view previous searches or favourite searches - store in local storage
-Ensure the site is responsive
-Ensure the UI is polished and easy to navigate
+
+- Accept user input to search cocktail database
+- Show an image of the cocktail where possible
+- Show the ingredients for the cocktail
+- Show the quantities per ingredient
+- Show the method to make the cocktail
+- Allow the user to view previous searches or favourite searches - store in local storage
+- Ensure the site is responsive
+- Ensure the UI is polished and easy to navigate
 
 ## Technologies Used
 
@@ -52,11 +51,11 @@ GIPHY was used for the cocktail GIF
 
 ## Challenges
 
-# Merge Conflicts
+### Merge Conflicts
 
 For most of the project we were all working on seperate areas of the code so we didn't experience many issues with Git. The last couple of days however, we were all working on the same areas. Some members would be polishing the CSS, re-writing parts of the HTML and working on functions and code that depended on each other. This brought issues with conflict merges. We each had to deal with our own conflicts and in some instances and had to rewrite a small amount of code. Upon looking into this, we can stash our changes, pull the latest updates and then use stash pop to push your own changes. If we had to do this project again, I believe 
 
-# Three APIs instead of Two
+### Three APIs instead of Two
 We had to use an extra API as we realised when appending the data on the page, our primary cocktail API, didn't include images! 
 We made use of the Cocktail DB API to get that image, and in the future or if we had to repeat the project, we would only use the Cocktail DB.
 
@@ -64,7 +63,7 @@ We made use of the Cocktail DB API to get that image, and in the future or if we
 
 With everyone having a full time job, it was sometimes difficult to collaborate outside of course hours. We met twice over the weekend for a standup and to priosritise certain tasks. We always knew what we were doing. If someone was having a problem with a certain element of the design or code, someone would always be on hand to assist and pair code or talk through ideas. I think this was a good example of us making use of Agile Methodology.
 
-# Agreement on Project
+### Agreement on Project
 
 We came up with the idea of the project quickly. We had initital ideas but quickly discovered that due to API complexity / auth method, it would be difficult to implement. We moved on quickly and found the Cocktail Ninja API within the first day of the project. 
 
@@ -132,8 +131,8 @@ If we had more time, we would implent the following:
 https://www.w3schools.com/
 https://developer.mozilla.org/en-US/
 
-- sorada.wright@gmail.com / https://github.com/SoradaW
-- rochellembradley@gmail.com / https://github.com/rbrd87
+- sorada.wright@gmail.com - https://github.com/SoradaW
+- rochellembradley@gmail.com - https://github.com/rbrd87
 - nicola162@gmail.com - https://github.com/Nikki1162
 - joenamihas@yahoo.co.uk - https://github.com/JosephNamihas 
 
