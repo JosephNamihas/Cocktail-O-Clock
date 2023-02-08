@@ -39,6 +39,7 @@ function getRandom() {
 
   $("#randomCocktailLink").on('click', function (event) {
     event.preventDefault();
+
     var cocktailName = randomCocktail;
 
     localStorage.setItem("nameOfCocktail", cocktailName);
@@ -66,12 +67,17 @@ $("#search-btn").on('click', function (event) {
 // Added a keyup event listener so the user can enter a cocktail and press enter on the keyboard instead of clicking the button
 $("#search-input").on("keyup", function (event) {
   if (event.keyCode === 13) {
+
     event.preventDefault();
+
     $("#search-btn").click();
+
   };
 });
 
 // Clears the html and local storage when the user clicks try again as it appended multiple suggestions
 $(".tryAgain").on('click', function () {
+
   $("#randomCocktail").html("");
+
 });

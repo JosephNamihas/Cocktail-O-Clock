@@ -53,7 +53,7 @@ body {
 
 .form-control:focus,
 .btn:focus {
-  border-color: #976d11;
+  filter: brightness(1.50);
   box-shadow: 0 0 5px 5px rgba(167, 99, 4, 0.486);
 }
 
@@ -72,18 +72,17 @@ body {
 }
 
 .custom-btn:hover {
-  background-color: #a7801d;
+  background-color: var(--gold);
   color: var(--white);
 }
 
 /* Modal styling */
-
 .modal {
-  color: white;
+  color: var(--white);
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .modal #errorText {
@@ -92,15 +91,15 @@ body {
 }
 
 .modal-header {
-  background-color: #46042a;
+  background-color: var(--plum);
 }
 
 .btn-close {
- background-color: #ffffff
+  background-color: var(--white);
 }
 
 .modal-footer {
-  border-color: #46042a;
+  border-color: var(--plum);
   border-top-width: 3px;
   justify-content: center;
   padding: 10px;
@@ -108,17 +107,16 @@ body {
 }
 
 .btn-primary {
-  background-color: #a7801d;
-  border: #a7801d;
-  --bs-btn-hover-bg:var(--plum)
-  /* TODO check with team about hover border color - currently makes button disappear onto white background */
-  }
+  background-color: var(--gold);
+  border: var(--gold);
+  --bs-btn-hover-bg: var(--plum);
+}
 
 .modal-body {
   text-align: center;
   padding: 10px;
   padding-bottom: 20px;
-  color: #46042a;
+  color: var(--plum);
 }
 
 .modal-image {
@@ -140,10 +138,9 @@ body {
 }
 
 /* Footer styling*/
-
 .copyright {
   font-size: 0.8rem;
-  color: #969494;
+  color: var(--grey);
   background-color: var(--plum);
   text-align: center;
   height: 5vh;
@@ -160,7 +157,7 @@ body {
   border-top: 4px solid var(--gold);
 }
 
-.footer img:hover{
+.footer img:hover {
   filter: brightness(1.50);
 }
 
@@ -171,7 +168,6 @@ body {
 .footer-link img {
   width: 100%;
   padding: 0 0.5rem;
-
 }
 /*end of footer*/
 
@@ -184,16 +180,28 @@ body {
 }
 
 @media only screen and (max-width: 481px) {
+  .custom-jumbotron {
+    height: 80vh;
+  }
+
+  .footer {
+    height: 10vh;
+  }
+
+  .copyright {
+    height: 10vh;
+  }
+
   .modal-dialog {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-  
+
   .modal-content {
     position: relative;
     display: flex;
     flex-direction: column;
     width: 95%;
   }
-  }
+}
