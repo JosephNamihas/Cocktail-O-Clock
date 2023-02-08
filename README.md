@@ -16,21 +16,20 @@ The application takes user input (their choice of cocktail) and returns a page w
 A list of related cocktails are provided on the side of the page, along with the option to add that specific cocktail to a 'Favourites' list.
 
 ## User Story
-
-USER STORY:
-AS A lover of cocktails
-I WANT a to be able to search for my favourite cocktails
-SO THAT I know the ingredients, quantities and methods for making the perfect drink
+ <br />AS A lover of cocktails
+ <br />I WANT a to be able to search for my favourite cocktails
+ <br />SO THAT I know the ingredients, quantities and methods for making the perfect drink
 
 ACCEPTANCE CRITERIA:
-Accept user input to search cocktail database
-Show an image of the cocktail where possible
-Show the ingredients for the cocktail
-Show the quantities per ingredient
-Show the method to make the cocktail
-Allow the user to view previous searches or favourite searches - store in local storage
-Ensure the site is responsive
-Ensure the UI is polished and easy to navigate
+
+- Accept user input to search cocktail database
+- Show an image of the cocktail where possible
+- Show the ingredients for the cocktail
+- Show the quantities per ingredient
+- Show the method to make the cocktail
+- Allow the user to view previous searches or favourite searches - store in local storage
+- Ensure the site is responsive
+- Ensure the UI is polished and easy to navigate
 
 ## Technologies Used
 
@@ -132,8 +131,8 @@ If we had more time, we would implent the following:
 https://www.w3schools.com/
 https://developer.mozilla.org/en-US/
 
-- sorada.wright@gmail.com / https://github.com/SoradaW
-- rochellembradley@gmail.com / https://github.com/rbrd87
+- sorada.wright@gmail.com - https://github.com/SoradaW
+- rochellembradley@gmail.com - https://github.com/rbrd87
 - nicola162@gmail.com - https://github.com/Nikki1162
 - joenamihas@yahoo.co.uk - https://github.com/JosephNamihas 
 
