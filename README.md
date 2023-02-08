@@ -15,6 +15,23 @@ The application takes user input (their choice of cocktail) and returns a page w
 
 A list of related cocktails are provided on the side of the page, along with the option to add that specific cocktail to a 'Favourites' list.
 
+## User Story
+
+USER STORY:
+AS A lover of cocktails
+I WANT a to be able to search for my favourite cocktails
+SO THAT I know the ingredients, quantities and methods for making the perfect drink
+
+ACCEPTANCE CRITERIA:
+Accept user input to search cocktail database
+Show an image of the cocktail where possible
+Show the ingredients for the cocktail
+Show the quantities per ingredient
+Show the method to make the cocktail
+Allow the user to view previous searches or favourite searches - store in local storage
+Ensure the site is responsive
+Ensure the UI is polished and easy to navigate
+
 ## Technologies Used
 
 The application employs two HTML pages - a main index file, and a file where the cocktail search results are displayed alongside some related content.
@@ -35,15 +52,30 @@ GIPHY was used for the cocktail GIF
 
 ## Challenges
 
+# Merge Conflicts
+
+For most of the project we were all working on seperate areas of the code so we didn't experience many issues with Git. The last couple of days however, we were all working on the same areas. Some members would be polishing the CSS, re-writing parts of the HTML and working on functions and code that depended on each other. This brought issues with conflict merges. We each had to deal with our own conflicts and in some instances and had to rewrite a small amount of code. Upon looking into this, we can stash our changes, pull the latest updates and then use stash pop to push your own changes. If we had to do this project again, I believe 
+
+# Three APIs instead of Two
+We had to use an extra API as we realised when appending the data on the page, our primary cocktail API, didn't include images! 
+We made use of the Cocktail DB API to get that image, and in the future or if we had to repeat the project, we would only use the Cocktail DB.
+
 ## Successes
+
+With everyone having a full time job, it was sometimes difficult to collaborate outside of course hours. We met twice over the weekend for a standup and to priosritise certain tasks. We always knew what we were doing. If someone was having a problem with a certain element of the design or code, someone would always be on hand to assist and pair code or talk through ideas. I think this was a good example of us making use of Agile Methodology.
+
+# Agreement on Project
+
+We came up with the idea of the project quickly. We had initital ideas but quickly discovered that due to API complexity / auth method, it would be difficult to implement. We moved on quickly and found the Cocktail Ninja API within the first day of the project. 
 
 Good planning and communication within the team. 
 
 ![Trello Utilization](./assets/images/readme-images/Trello-screenshot.png)
 
-Our wire frame
+Our initial design process. Our wire frame
 
 ![Cocktail O'Clock GIF](./assets/images/readme-images/wireframe.gif)
+
 ## Input from each team member
 
 Rochelle - ``` I really enjoyed working on our first team project. From the first wireframe to the last little touches with CSS and JS, everyone has contributed and supported eachother, we've all done parts of the project that perhaps we don't really enjoy. 
